@@ -1,0 +1,59 @@
+[
+    {
+      "id": 1,
+      "name": "Soccer",
+      "image": "/images/soccer.jpg",
+      "description": "Explore premium soccer gear, apparel, and accessories.",
+      "cta": "Shop Soccer"
+    },
+    {
+      "id": 2,
+      "name": "Basketball",
+      "image": "/images/basketball.jpg",
+      "description": "Top-quality basketball equipment for the court.",
+      "cta": "Shop Basketball"
+    },
+    {
+      "id": 3,
+      "name": "Tennis",
+      "image": "/images/tennis.jpg",
+      "description": "Gear up with rackets, balls, and apparel for tennis.",
+      "cta": "Shop Tennis"
+    },
+    {
+      "id": 4,
+      "name": "Running",
+      "image": "/images/running.jpg",
+      "description": "High-performance running shoes and accessories.",
+      "cta": "Shop Running"
+    },
+    {
+      "id": 5,
+      "name": "Yoga & Pilates",
+      "image": "/images/yoga.jpg",
+      "description": "Find yoga mats, blocks, and accessories to enhance your practice.",
+      "cta": "Shop Yoga"
+    },
+    {
+      "id": 6,
+      "name": "Gym & Fitness",
+      "image": "/images/gym.jpg",
+      "description": "Get gym equipment and fitness essentials.",
+      "cta": "Shop Fitness"
+    },
+    {
+      "id": 7,
+      "name": "Swimming",
+      "image": "/images/swimming.jpg",
+      "description": "Swimwear, goggles, and accessories for all swimmers.",
+      "cta": "Shop Swimming"
+    },
+    {
+      "id": 8,
+      "name": "Cycling",
+      "image": "/images/cycling.jpg",
+      "description": "Cycling gear for enthusiasts and professionals.",
+      "cta": "Shop Cycling"
+    }
+  ]
+  
