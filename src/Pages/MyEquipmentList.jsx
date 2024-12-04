@@ -1,13 +1,25 @@
 /* eslint-disable no-unused-vars */
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useLocation } from "react-router-dom";
 import MyEquipmentListCard from "../components/MyEquipmentListCard.jsx";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
 import Swal from "sweetalert2";
 
 const MyEquipmentList = () => {
-  const data2 = useLoaderData();
-  const [data, setData] = useState(data2);
+  const {user} = useContext(AuthContext)
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/equip/${user?.email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data);
+        setData(data);
+      });
+  }, [user]);
+
+
+
   const handleDelete = (id) => {
     console.log(id);
     Swal.fire({

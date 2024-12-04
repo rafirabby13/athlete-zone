@@ -1,10 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 const Login = () => {
   const { setUser, loginUser , googleLogin} = useContext(AuthContext);
+
+  const location = useLocation()
+  console.log(location);
+
+  const navigate = useNavigate()
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,6 +26,7 @@ const Login = () => {
         setUser(res.user);
         form.reset();
         toast.success("Sign In Successfully");
+        navigate(location?.state ? location.state : '/')
       })
       .catch((err) => {
         console.log(err.message);
@@ -30,6 +37,8 @@ const Login = () => {
     googleLogin()
     .then(res=>{
         console.log(res.user);
+        navigate(location.state ? location.state : '/')
+
         toast.success("Sign In Successfully");
         setUser(res.user)
     })

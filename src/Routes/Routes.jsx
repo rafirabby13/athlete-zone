@@ -8,6 +8,7 @@ import AllSportsEquipment from "../Pages/AllSportsEquipment.jsx";
 import AllSportsDetail from "../Pages/AllSportsDetail.jsx";
 import MyEquipmentList from "../Pages/MyEquipmentList.jsx";
 import UpdateEquipment from "../components/UpdateEquipment.jsx";
+import PrivateRoute from "./PrivateRoute.jsx";
 
 
 export const router = createBrowserRouter([
@@ -29,7 +30,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/addEquipment',
-                element: <AddEquipment/>
+                element: <PrivateRoute><AddEquipment/></PrivateRoute>
             },
             {
                 path: '/allSports',
@@ -38,13 +39,12 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/allSports/:id',
-                element: <AllSportsDetail/>,
+                element: <PrivateRoute><AllSportsDetail/></PrivateRoute>,
                 loader: ({params})=> fetch(`http://localhost:5000/equipment/${params.id}`)
             },
             {
-                path: '/myEquipment/:email',
-                element: <MyEquipmentList/>,
-                loader: ({params})=> fetch(`http://localhost:5000/equip/${params.email}`)
+                path: '/myEquipment',
+                element: <PrivateRoute><MyEquipmentList/></PrivateRoute>
             },
             {
                 path: '/updateEquipment/:id',

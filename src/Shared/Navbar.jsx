@@ -1,25 +1,46 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
-  const {user} = useContext(AuthContext)
+  const { user, logoutUser } = useContext(AuthContext);
   const items = (
     <>
       <li>
-        <NavLink to='/'>Home</NavLink>
+        <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to='/allSports'>All Sports Equipment</NavLink>
+        <NavLink to="/allSports">All Sports Equipment</NavLink>
       </li>
       <li>
-        <NavLink to='/addEquipment'>Add Equipment</NavLink>
+        <NavLink to="/addEquipment">Add Equipment</NavLink>
       </li>
       <li>
-        <NavLink to={`/myEquipment/${user?.email}`}>My Equipment List</NavLink>
+        <NavLink to={`/myEquipment`}>My Equipment List</NavLink>
       </li>
     </>
   );
+
+
+  const handleLogout=()=>{
+    logoutUser()
+    .then(()=>{
+      Swal.fire({
+        title: "Sign OUt",
+        text: "Successfully Sign out",
+        icon: "success"
+      });
+    })
+    .catch(err=>{
+      Swal.fire({
+        title: "Error",
+        text: err.message,
+        icon: "error"
+      });
+    })
+
+  }
 
   return (
     <div className="py-7">
@@ -49,17 +70,24 @@ const Navbar = () => {
               {items}
             </ul>
           </div>
-          <Link to='/' className=" text-xl">AthleteZone </Link>
+          <Link to="/" className=" text-xl">
+            AthleteZone{" "}
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            {items}
-          </ul>
+          <ul className="menu menu-horizontal px-1">{items}</ul>
         </div>
         <div className="navbar-end">
-          <Link className="btn" to='/login'>Login</Link>
-          <Link to='/register' className="btn">Register</Link>
-          <Link className="btn">Logout</Link>
+          {user ? (
+            <div className="flex items-center gap-4">
+              <img className="h-16 w-16 rounded-3xl" src={user?.photoURL} alt="" />
+              <Link onClick={handleLogout} className="btn">Logout</Link>
+            </div>
+          ) : (
+            <Link className="btn" to="/login">
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>
