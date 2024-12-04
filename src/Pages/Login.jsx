@@ -30,6 +30,7 @@ const Login = () => {
     googleLogin()
     .then(res=>{
         console.log(res.user);
+        toast.success("Sign In Successfully");
         setUser(res.user)
     })
     .catch(err=>{

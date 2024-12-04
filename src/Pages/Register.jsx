@@ -41,6 +41,7 @@ const {registerUser, setUser, updateUserProfile, googleLogin} = useContext(AuthC
         googleLogin()
         .then(res=>{
             console.log(res.user);
+            toast.success('Registered Successfully')
             setUser(res.user)
         })
         .catch(err=>{

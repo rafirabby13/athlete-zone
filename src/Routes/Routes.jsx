@@ -3,6 +3,7 @@ import Root from "../components/Root.jsx";
 import Home from "../Pages/Home.jsx";
 import Register from "../Pages/Register.jsx";
 import Login from "../Pages/Login.jsx";
+import AddEquipment from "../Pages/AddEquipment.jsx";
 
 
 export const router = createBrowserRouter([
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login/>
+            },
+            {
+                path: '/addEquipment',
+                element: <AddEquipment/>
             }
         ]
     }

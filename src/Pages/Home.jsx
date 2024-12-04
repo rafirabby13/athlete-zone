@@ -10,17 +10,13 @@ import "react-toastify/dist/ReactToastify.css";
 const Home = () => {
   return (
     <div className="space-y-10">
-      <section>
-        <Navbar />
-      </section>
+     
       <section>{/* <Banner /> */}</section>
       <section>{/* <SportsCategories /> */}</section>
       <section>{/* <UpcomingEvents/> */}</section>
       <section>{/* <TrendingNow/> */}</section>
       <section className="min-h-screen"></section>
-      <section>
-        <Footer />
-      </section>
+     
       
     </div>
   );

@@ -1,11 +1,19 @@
 import { Outlet } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Navbar from "../Shared/Navbar.jsx";
+import Footer from "../Shared/Footer.jsx";
 
 const Root = () => {
   return (
     <div className="max-w-[85%] mx-auto">
+      <section>
+        <Navbar />
+      </section>
       <Outlet />
+      <section>
+        <Footer />
+      </section>
       <ToastContainer
         position="top-center"
         autoClose={1000}
