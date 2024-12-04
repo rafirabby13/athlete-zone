@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { ToastContainer } from "react-toastify";
 import Banner from "../components/Banner.jsx";
 import Feedbacks from "../components/Feedbacks.jsx";

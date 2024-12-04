@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider.jsx";
 
 const Navbar = () => {
+  const {user} = useContext(AuthContext)
   const items = (
     <>
       <li>
@@ -13,7 +16,7 @@ const Navbar = () => {
         <NavLink to='/addEquipment'>Add Equipment</NavLink>
       </li>
       <li>
-        <NavLink>My Equipment List</NavLink>
+        <NavLink to={`/myEquipment/${user?.email}`}>My Equipment List</NavLink>
       </li>
     </>
   );
