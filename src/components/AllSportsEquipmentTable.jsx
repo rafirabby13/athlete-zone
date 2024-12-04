@@ -5,8 +5,8 @@ const AllSportsEquipmentTable = ({ equipment }) => {
   console.log(equipment);
   return (
     <div>
-      <div className="overflow-x-auto">
-        <table className="table table-zebra">
+      <div className="overflow-x-auto w-full ">
+        <table className="table table-zebra border-2">
        
         
           <thead>

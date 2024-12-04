@@ -9,12 +9,14 @@ import AllSportsDetail from "../Pages/AllSportsDetail.jsx";
 import MyEquipmentList from "../Pages/MyEquipmentList.jsx";
 import UpdateEquipment from "../components/UpdateEquipment.jsx";
 import PrivateRoute from "./PrivateRoute.jsx";
+import Error from "../Pages/Error.jsx";
 
 
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <Root/>,
+        errorElement: <Error/>,
         children: [
             {
                 path: '',

@@ -2,7 +2,9 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
 import Swal from "sweetalert2";
-
+import { Tooltip } from "react-tooltip";
+import { Fade } from "react-awesome-reveal";
+import 'animate.css';
 const Navbar = () => {
   const { user, logoutUser } = useContext(AuthContext);
   const items = (
@@ -22,25 +24,23 @@ const Navbar = () => {
     </>
   );
 
-
-  const handleLogout=()=>{
+  const handleLogout = () => {
     logoutUser()
-    .then(()=>{
-      Swal.fire({
-        title: "Sign OUt",
-        text: "Successfully Sign out",
-        icon: "success"
+      .then(() => {
+        Swal.fire({
+          title: "Sign OUt",
+          text: "Successfully Sign out",
+          icon: "success",
+        });
+      })
+      .catch((err) => {
+        Swal.fire({
+          title: "Error",
+          text: err.message,
+          icon: "error",
+        });
       });
-    })
-    .catch(err=>{
-      Swal.fire({
-        title: "Error",
-        text: err.message,
-        icon: "error"
-      });
-    })
-
-  }
+  };
 
   return (
     <div className="py-7">
@@ -70,9 +70,11 @@ const Navbar = () => {
               {items}
             </ul>
           </div>
-          <Link to="/" className=" text-xl">
+          <Fade  delay={1e3} cascade damping={1e-1}>
+          <Link to="/" className="animate__animated animate__zoomOutUp animate__slower animate__infinite text-2xl font-bold">
             AthleteZone{" "}
           </Link>
+          </Fade>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{items}</ul>
@@ -80,8 +82,20 @@ const Navbar = () => {
         <div className="navbar-end">
           {user ? (
             <div className="flex items-center gap-4">
-              <img className="h-16 w-16 rounded-3xl" src={user?.photoURL} alt="" />
-              <Link onClick={handleLogout} className="btn">Logout</Link>
+              <img
+                data-tooltip-id="my-tooltip"
+                className="h-16 w-16 rounded-3xl"
+                src={user?.photoURL}
+                alt=""
+              />
+              <Tooltip variant="success" style={{background: 'purple', color: 'white' , fontSize: '16px'}} id="my-tooltip" className="z-50 bg-green-600 text-white">
+                <div>
+                  <h3>{user?.displayName}</h3>
+                </div>
+              </Tooltip>
+              <Link onClick={handleLogout} className="btn">
+                Logout
+              </Link>
             </div>
           ) : (
             <Link className="btn" to="/login">
