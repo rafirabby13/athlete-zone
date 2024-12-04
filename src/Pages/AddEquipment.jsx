@@ -17,11 +17,12 @@ const AddEquipment = () => {
         const rating = form.rating.value;
         const customization = form.customization.value;
         const time = form.time.value;
-        // const stock = form.stock.value;
+        const stock = form.stock.value;
+       
         const email = form.email.value;
         const displayName = form.displayName.value;
 
-        const equipment = {photo,name,category,description,price,rating,customization,time,email,displayName}
+        const equipment = {photo,name,category,description,price,rating,customization,time,stock,email,displayName}
         console.log(equipment);
     }
 
@@ -128,18 +129,18 @@ const AddEquipment = () => {
               required
             />
           </div>
-          {/* <div className="form-control w-full ">
+          <div className="form-control w-full ">
             <label className="label">
               <span className="label-text">Stock Status</span>
             </label>
-            <select className="select select-bordered w-full ">
+            <select  name="stock" className="select select-bordered w-full ">
               <option disabled selected>
                 Pick your favorite Simpson
               </option>
-              <option>Available</option>
-              <option>Not Available</option>
+              <option value="Available">Available</option>
+              <option value="Not Available">Not Available</option>
             </select>
-          </div> */}
+          </div>
           <div className="form-control">
             <label className="label">
               <span className="label-text">
