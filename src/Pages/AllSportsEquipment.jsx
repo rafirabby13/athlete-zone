@@ -4,9 +4,7 @@ const AllSportsEquipment = () => {
   const data = useLoaderData();
   // console.log(data);
 
-  const handleShowDetails = (id) => {
-    console.log(id);
-  };
+ 
   return (
     <div className="min-h-screen">
       <div className="overflow-x-auto">
