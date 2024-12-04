@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
+import { useLoaderData } from "react-router-dom";
 
-const AddEquipment = () => {
-
+const UpdateEquipment = () => {
     const {user } = useContext(AuthContext)
 
-
+const data = useLoaderData()
+// console.log(data);
     const handleAddEquipment=(e)=>{
         e.preventDefault()
         const form = e.target;
@@ -24,9 +25,8 @@ const AddEquipment = () => {
 
         const equipment = {photo,name,category,description,price,rating,customization,time,stock,email,displayName}
         console.log(equipment);
-
-        fetch('http://localhost:5000/equipment',{
-            method: 'POST',
+        fetch(`http://localhost:5000/equip/${data._id}`,{
+            method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
@@ -39,12 +39,12 @@ const AddEquipment = () => {
         .catch(err=>{
             console.log(err);
         })
+
+        
     }
-
-
-  return (
-    <div className="min-h-screen">
-      <div className="card bg-base-100 w-full  shrink-0 shadow-2xl rounded-none">
+    return (
+        <div className="min-h-screen">
+           <div className="card bg-base-100 w-full  shrink-0 shadow-2xl rounded-none">
         <form className="card-bod grid grid-cols-2 gap-4 p-16" onSubmit={handleAddEquipment}>
           <div className="form-control ">
             <label className="label">
@@ -55,6 +55,7 @@ const AddEquipment = () => {
               placeholder="Image URL"
               className="input input-bordered"
               name="photo"
+              defaultValue={data.photo}
               
             />
           </div>
@@ -67,6 +68,8 @@ const AddEquipment = () => {
               placeholder="Item Name"
               className="input input-bordered"
               name="name"
+              defaultValue={data.name}
+
               
             />
           </div>
@@ -79,6 +82,7 @@ const AddEquipment = () => {
               placeholder="Category Name"
               className="input input-bordered"
               name="category"
+              defaultValue={data.category}
               
             />
           </div>
@@ -91,6 +95,7 @@ const AddEquipment = () => {
               placeholder="Description"
               className="input input-bordered"
               name="description"
+              defaultValue={data.description}
               
             />
           </div>
@@ -103,6 +108,7 @@ const AddEquipment = () => {
               placeholder="Price"
               className="input input-bordered"
               name="price"
+              defaultValue={data.price}
               
             />
           </div>
@@ -115,6 +121,7 @@ const AddEquipment = () => {
               placeholder="Rating"
               className="input input-bordered"
               name="rating"
+              defaultValue={data.rating}
               
             />
           </div>
@@ -127,7 +134,7 @@ const AddEquipment = () => {
               placeholder="Customization "
               className="input input-bordered"
               name="customization"
-              
+              defaultValue={data.customization}
             />
           </div>
           <div className="form-control">
@@ -141,14 +148,14 @@ const AddEquipment = () => {
               placeholder="Processing Time (delivery time) "
               className="input input-bordered"
               name="time"
-              
+              defaultValue={data.time}
             />
           </div>
           <div className="form-control w-full ">
             <label className="label">
               <span className="label-text">Stock Status</span>
             </label>
-            <select  name="stock" className="select select-bordered w-full ">
+            <select defaultValue={data.stock.value}  name="stock" className="select select-bordered w-full ">
               <option disabled selected>
                 Pick your favorite Simpson
               </option>
@@ -186,12 +193,12 @@ const AddEquipment = () => {
           </div>
 
           <div className="form-control mt-6 col-span-2">
-            <button className="btn btn-primary">Add Equipment</button>
+            <button className="btn btn-primary">Update Equipment</button>
           </div>
         </form>
       </div>
-    </div>
-  );
+        </div>
+    );
 };
 
-export default AddEquipment;
+export default UpdateEquipment;
