@@ -2,6 +2,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Register = () => {
 
@@ -23,7 +24,8 @@ const {registerUser, setUser, updateUserProfile} = useContext(AuthContext)
             setUser(res.user)
             updateUserProfile(name, photo)
             .then(()=>{
-                console.log('ok updated');
+                toast.success('Registered Successfully')
+                form.reset()
             })
             .catch(err=>{
                 console.log(err.message);

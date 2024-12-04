@@ -2,7 +2,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
 import { Link } from "react-router-dom";
-
+import { toast } from "react-toastify";
 const Login = () => {
     const { setUser,loginUser } = useContext(AuthContext)
 
@@ -20,6 +20,8 @@ const Login = () => {
         .then(res=>{
             console.log(res.user);
             setUser(res.user)
+            form.reset()
+            toast.success('Sign In Successfully')
             
         })
         .catch(err=>{
@@ -32,7 +34,7 @@ const Login = () => {
         <div className="her bg-base-200 min-h-screen">
         <div className="hero-conten flex-col ">
           <div className="text-center py-10">
-            <h1 className="text-5xl font-bold">Register now!</h1>
+            <h1 className="text-5xl font-bold">Login now!</h1>
           
           </div>
           <div className="card bg-base-100 w-full max-w-xl mx-auto py-10  shrink-0 shadow-2xl">
@@ -71,6 +73,7 @@ const Login = () => {
             </form>
           </div>
         </div>
+        
       </div>
     );
 };
