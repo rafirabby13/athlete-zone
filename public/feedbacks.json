@@ -1,0 +1,213 @@
+[
+    {
+      "id": 1,
+      "name": "Sharice Ball",
+      "role": "Store Manager",
+      "testimonial": "Here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+      "image": "https://randomuser.me/api/portraits/women/63.jpg"
+    },
+    {
+      "id": 2,
+      "name": "John Doe",
+      "role": "Marketing Specialist",
+      "testimonial": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "image": "/images/john-doe.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Jane Smith",
+      "role": "Software Developer",
+      "testimonial": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets.",
+      "image": "/images/jane-smith.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Bob Brown",
+      "role": "Graphic Designer",
+      "testimonial": "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum.",
+      "image": "/images/bob-brown.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Alice Cooper",
+      "role": "Product Manager",
+      "testimonial": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+      "image": "/images/alice-cooper.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Mia Johnson",
+      "role": "UX Designer",
+      "testimonial": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "image": "https://randomuser.me/api/portraits/women/6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Chris Lee",
+      "role": "Web Developer",
+      "testimonial": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets.",
+      "image": "/images/chris-lee.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Sophia Williams",
+      "role": "Content Writer",
+      "testimonial": "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum.",
+      "image": "https://randomuser.me/api/portraits/women/16.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Michael Scott",
+      "role": "Regional Manager",
+      "testimonial": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+      "image": "/images/michael-scott.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Olivia Brown",
+      "role": "HR Director",
+      "testimonial": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "image": "https://randomuser.me/api/portraits/women/36.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Liam Smith",
+      "role": "Chief Executive Officer",
+      "testimonial": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets.",
+      "image": "/images/liam-smith.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Emma Wilson",
+      "role": "Creative Director",
+      "testimonial": "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum.",
+      "image": "https://randomuser.me/api/portraits/women/22.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Jacob Johnson",
+      "role": "Marketing Manager",
+      "testimonial": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+      "image": "/images/jacob-johnson.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Ethan Taylor",
+      "role": "Lead Developer",
+      "testimonial": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "image": "/images/ethan-taylor.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Isabella Anderson",
+      "role": "Senior Designer",
+      "testimonial": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets.",
+      "image": "https://randomuser.me/api/portraits/women/11.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Charlotte White",
+      "role": "Software Engineer",
+      "testimonial": "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum.",
+      "image": "https://randomuser.me/api/portraits/women/13.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Daniel Martin",
+      "role": "Operations Manager",
+      "testimonial": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+      "image": "/images/daniel-martin.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Zoe Harris",
+      "role": "Marketing Lead",
+      "testimonial": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "image": "/images/zoe-harris.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Lucas Thomas",
+      "role": "IT Specialist",
+      "testimonial": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets.",
+      "image": "/images/lucas-thomas.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Amelia Jackson",
+      "role": "Customer Service Manager",
+      "testimonial": "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum.",
+      "image": "https://randomuser.me/api/portraits/women/14.jpg"
+    },
+    {
+      "id": 21,
+      "name": "Henry White",
+      "role": "Chief Operations Officer",
+      "testimonial": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+      "image": "/images/henry-white.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Chloe Adams",
+      "role": "Account Manager",
+      "testimonial": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "image": "/images/chloe-adams.jpg"
+    },
+    {
+      "id": 23,
+      "name": "Aiden Clark",
+      "role": "HR Manager",
+      "testimonial": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets.",
+      "image": "/images/aiden-clark.jpg"
+    },
+    {
+      "id": 24,
+      "name": "Ella Lewis",
+      "role": "Senior Copywriter",
+      "testimonial": "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum.",
+      "image": "https://randomuser.me/api/portraits/women/44.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Jackson Lee",
+      "role": "Web Designer",
+      "testimonial": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+      "image": "/images/jackson-lee.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Lily Carter",
+      "role": "Project Manager",
+      "testimonial": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "image": "https://randomuser.me/api/portraits/women/33.jpg"
+    },
+    {
+      "id": 27,
+      "name": "William King",
+      "role": "Lead Architect",
+      "testimonial": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets.",
+      "image": "/images/william-king.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Sophie Walker",
+      "role": "Community Manager",
+      "testimonial": "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum.",
+      "image": "https://randomuser.me/api/portraits/women/21.jpg"
+    },
+    {
+      "id": 29,
+      "name": "James Mitchell",
+      "role": "CEO",
+      "testimonial": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+      "image": "/images/james-mitchell.jpg"
+    },
+    {
+      "id": 30,
+      "name": "Ava Robinson",
+      "role": "Operations Supervisor",
+      "testimonial": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "image": "https://randomuser.me/api/portraits/women/28.jpg"
+    }
+  ]
+  

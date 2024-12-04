@@ -1,6 +1,8 @@
 import Banner from "../components/Banner.jsx";
+import Feedbacks from "../components/Feedbacks.jsx";
 import SportsCategories from "../components/SportsCategories.jsx";
 import TrendingNow from "../components/TrendingNow.jsx";
+import UpcomingEvents from "../components/UpcomingEvents.jsx";
 import Footer from "../Shared/Footer.jsx";
 import Navbar from "../Shared/Navbar.jsx";
 
@@ -17,7 +19,10 @@ const Home = () => {
         {/* <SportsCategories /> */}
       </section>
       <section>
-        <TrendingNow/>
+        <UpcomingEvents/>
+      </section>
+      <section>
+        {/* <TrendingNow/> */}
       </section>
       <section className="min-h-screen"></section>
       <section>

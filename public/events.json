@@ -1,0 +1,59 @@
+ [
+      {
+        "id": 1,
+        "title": "Summer Sports Gear Sale",
+        "date": "2024-06-01",
+        "end_date": "2024-06-15",
+        "category": "Sale",
+        "location": "Online Store",
+        "description": "Get up to 50% off on all sports equipment and apparel. Don't miss out on the biggest sale of the year!",
+        "image": "https://example.com/images/summer-sale.jpg",
+        "event_url": "https://example.com/summer-sale"
+      },
+      {
+        "id": 2,
+        "title": "Football Training Camp",
+        "date": "2024-07-10",
+        "end_date": "2024-07-14",
+        "category": "Sports Camp",
+        "location": "New York City Football Club Stadium",
+        "description": "Join us for a 5-day football training camp with professional coaches to improve your skills and fitness.",
+        "image": "https://example.com/images/football-camp.jpg",
+        "event_url": "https://example.com/football-camp"
+      },
+      {
+        "id": 3,
+        "title": "Basketball Tournament 2024",
+        "date": "2024-08-05",
+        "end_date": "2024-08-10",
+        "category": "Tournament",
+        "location": "Los Angeles Sports Arena",
+        "description": "A week-long basketball tournament for all skill levels. Register now to compete for great prizes.",
+        "image": "https://example.com/images/basketball-tournament.jpg",
+        "event_url": "https://example.com/basketball-tournament"
+      },
+      {
+        "id": 4,
+        "title": "Tennis Pro Exhibition Match",
+        "date": "2024-09-15",
+        "end_date": "2024-09-15",
+        "category": "Exhibition Match",
+        "location": "Miami Tennis Stadium",
+        "description": "Watch the best tennis professionals go head-to-head in an exclusive exhibition match.",
+        "image": "https://example.com/images/tennis-exhibition.jpg",
+        "event_url": "https://example.com/tennis-exhibition"
+      },
+      {
+        "id": 5,
+        "title": "Marathon Training Program",
+        "date": "2024-10-01",
+        "end_date": "2024-10-31",
+        "category": "Fitness Program",
+        "location": "Citywide (Multiple Locations)",
+        "description": "Get ready for the big race with our marathon training program. Sign up for expert coaching and fitness sessions.",
+        "image": "https://example.com/images/marathon-training.jpg",
+        "event_url": "https://example.com/marathon-training"
+      }
+    ]
+  
+  
