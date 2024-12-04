@@ -24,6 +24,21 @@ const AddEquipment = () => {
 
         const equipment = {photo,name,category,description,price,rating,customization,time,stock,email,displayName}
         console.log(equipment);
+
+        fetch('http://localhost:5000/equipment',{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(equipment)
+        })
+        .then(res=> res.json())
+        .then(res=>{
+            console.log(res);
+        })
+        .catch(err=>{
+            console.log(err);
+        })
     }
 
 
@@ -149,7 +164,7 @@ const AddEquipment = () => {
             </label>
             <input
               type="text"
-              value={user.email}
+              value={user?.email}
               className="input input-bordered"
               name="email"
               required
@@ -163,7 +178,7 @@ const AddEquipment = () => {
             </label>
             <input
               type="text"
-              value={user.displayName}
+              value={user?.displayName}
               className="input input-bordered"
               name="displayName"
               required
