@@ -1,8 +1,12 @@
-import { useEffect, useState } from "react";
+/* eslint-disable no-unused-vars */
+import { useContext, useEffect, useState } from "react";
 import EventCard from "./EventCard.jsx";
+import { AuthContext } from "../Providers/AuthProvider.jsx";
 
 const UpcomingEvents = () => {
     const [events, setEvents] = useState([]);
+
+  
 
   useEffect(() => {
     fetch("./events.json")

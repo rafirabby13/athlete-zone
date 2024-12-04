@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="space-y-10">
       <section>
-        {/* <Navbar /> */}
+        <Navbar />
       </section>
       <section>
         {/* <Banner /> */}
@@ -19,7 +19,7 @@ const Home = () => {
         {/* <SportsCategories /> */}
       </section>
       <section>
-        <UpcomingEvents/>
+        {/* <UpcomingEvents/> */}
       </section>
       <section>
         {/* <TrendingNow/> */}
