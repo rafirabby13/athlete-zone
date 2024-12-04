@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 
 const Register = () => {
 
-const {registerUser, setUser, updateUserProfile} = useContext(AuthContext)
+const {registerUser, setUser, updateUserProfile, googleLogin} = useContext(AuthContext)
 
 
 
@@ -37,7 +37,16 @@ const {registerUser, setUser, updateUserProfile} = useContext(AuthContext)
 
     }
 
-
+    const handleGoogleLogin=()=>{
+        googleLogin()
+        .then(res=>{
+            console.log(res.user);
+            setUser(res.user)
+        })
+        .catch(err=>{
+            console.log(err.message);
+        })
+      }
 
 
   return (
@@ -103,6 +112,10 @@ const {registerUser, setUser, updateUserProfile} = useContext(AuthContext)
               <button className="btn btn-primary">Register</button>
             </div>
           </form>
+          <div className="divider divider-info w-3/4 mx-auto pb-5">OR</div>
+          <div className="text-center w-full">
+            <button className="border-2 w-3/4 p-4  text-2xl font-semibold rounded-lg  shadow-red-400 shadow-md" onClick={handleGoogleLogin}>Sign Up With Google</button>
+          </div>
         </div>
       </div>
     </div>
