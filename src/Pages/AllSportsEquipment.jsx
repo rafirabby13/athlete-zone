@@ -1,18 +1,60 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const AllSportsEquipment = () => {
-  const data = useLoaderData();
+  // const loadedData = useLoaderData();
   // console.log(data);
+  const [data, setData] = useState([]);
 
- 
+  useEffect(() => {
+    fetch("http://localhost:5000/equipment")
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data);
+        setData(data);
+      });
+  }, []);
+
+  const handleSorting = (e) => {
+    e.preventDefault();
+    const selectedOption = e.target.value;
+    console.log(selectedOption);
+    if (selectedOption == "ascending") {
+      const sortedData = [...data].sort(function (a, b) {
+        return a.price - b.price;
+      });
+
+      setData(sortedData);
+    } else {
+      const sortedData = [...data].sort(function (a, b) {
+        return b.price - a.price;
+      });
+
+      setData(sortedData);
+    }
+  };
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen py-20">
+      <div className="flex items-center justify-between p-20">
+        <h1 className="w-fit  text-4xl font-bold p-4 shadow-purple-600 shadow-md text-center mb-2">
+          All Sports Equipment
+        </h1>
+       
+        
+          <select className="border-2 p-4 rounded-lg bg-purple-500 text-white text-2xl font-semibold" name="sorting" onChange={handleSorting} selected="Sort">
+            <option selected>Sort</option>
+            <option value="ascending">Ascending</option>
+            <option value="descending">Descending</option>
+          </select>
+       
+      </div>
       <div className="overflow-x-auto">
         <table className="table  border-2 text-center">
           {/* head */}
 
           <thead className="">
-            <tr >
+            <tr>
               <th></th>
               <th>No.</th>
               <th>Name</th>
@@ -34,9 +76,9 @@ const AllSportsEquipment = () => {
                 <td></td>
                 <td>{equipment?.price} $</td>
                 <td>
-                  <Link to={`/allSports/${equipment?._id}`}
+                  <Link
+                    to={`/allSports/${equipment?._id}`}
                     className="btn btn-accent"
-                    
                   >
                     View details
                   </Link>

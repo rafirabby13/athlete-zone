@@ -36,8 +36,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/allSports',
-                element: <AllSportsEquipment/>,
-                loader: ()=> fetch('http://localhost:5000/equipment')
+                element: <AllSportsEquipment/>
             },
             {
                 path: '/allSports/:id',
