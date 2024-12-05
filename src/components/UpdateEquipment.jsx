@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
 import { useLoaderData } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const UpdateEquipment = () => {
   const { user } = useContext(AuthContext);
@@ -47,159 +48,165 @@ const UpdateEquipment = () => {
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
+        if (res.modifiedCount > 0) {
+          toast.success("Updated Successfully");
+        }
       })
       .catch((err) => {
         console.log(err);
       });
   };
   return (
-    <div className="min-h-screen">
-      <div className="card bg-base-100 w-full  shrink-0 shadow-2xl rounded-none">
-        <form
-          className="card-bod grid grid-cols-2 gap-4 p-16"
-          onSubmit={handleAddEquipment}
-        >
-          <div className="form-control ">
-            <label className="label">
-              <span className="label-text">Image</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Image URL"
-              className="input input-bordered"
-              name="photo"
-              defaultValue={data.photo}
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Item Name</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Item Name"
-              className="input input-bordered"
-              name="name"
-              defaultValue={data.name}
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Category Name</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Category Name"
-              className="input input-bordered"
-              name="category"
-              defaultValue={data.category}
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Description</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Description"
-              className="input input-bordered"
-              name="description"
-              defaultValue={data.description}
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Price</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Price"
-              className="input input-bordered"
-              name="price"
-              defaultValue={data.price}
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Rating</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Rating"
-              className="input input-bordered"
-              name="rating"
-              defaultValue={data.rating}
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Customization </span>
-            </label>
-            <input
-              type="text"
-              placeholder="Customization "
-              className="input input-bordered"
-              name="customization"
-              defaultValue={data.customization}
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">
-                Processing Time (delivery time){" "}
-              </span>
-            </label>
-            <input
-              type="text"
-              placeholder="Processing Time (delivery time) "
-              className="input input-bordered"
-              name="time"
-              defaultValue={data.time}
-            />
-          </div>
-          <div className="form-control w-full ">
-            <label className="label">
-              <span className="label-text">Stock Status</span>
-            </label>
-            <select
-              defaultValue={data.stock.value}
-              name="stock"
-              className="select select-bordered w-full "
-            >
-              <option disabled selected>
-                Pick your favorite Simpson
-              </option>
-              <option value="Available">Available</option>
-              <option value="Not Available">Not Available</option>
-            </select>
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">User Email</span>
-            </label>
-            <input
-              type="text"
-              value={user?.email}
-              className="input input-bordered"
-              name="email"
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">User Name</span>
-            </label>
-            <input
-              type="text"
-              value={user?.displayName}
-              className="input input-bordered"
-              name="displayName"
-            />
-          </div>
+    <div className="py-10">
+      <h1 className="w-3/4 mx-auto text-4xl font-bold p-4 shadow-purple-600 shadow-md text-center mb-2">
+        Update Equipment
+      </h1>
+      <div className="min-h-screen">
+        <div className="card bg-base-100 w-full  shrink-0 shadow-2xl rounded-none">
+          <form
+            className="card-bod grid grid-cols-2 gap-4 p-16"
+            onSubmit={handleAddEquipment}
+          >
+            <div className="form-control ">
+              <label className="label">
+                <span className="label-text text-xl">Image</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Image URL"
+                className="input input-bordered"
+                name="photo"
+                defaultValue={data.photo}
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-xl">Item Name</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Item Name"
+                className="input input-bordered"
+                name="name"
+                defaultValue={data.name}
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-xl">Category Name</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Category Name"
+                className="input input-bordered"
+                name="category"
+                defaultValue={data.category}
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-xl">Description</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Description"
+                className="input input-bordered"
+                name="description"
+                defaultValue={data.description}
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-xl">Price</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Price"
+                className="input input-bordered"
+                name="price"
+                defaultValue={data.price}
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-xl">Rating</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Rating"
+                className="input input-bordered"
+                name="rating"
+                defaultValue={data.rating}
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-xl">Customization </span>
+              </label>
+              <input
+                type="text"
+                placeholder="Customization "
+                className="input input-bordered"
+                name="customization"
+                defaultValue={data.customization}
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-xl">
+                  Processing Time (delivery time){" "}
+                </span>
+              </label>
+              <input
+                type="text"
+                placeholder="Processing Time (delivery time) "
+                className="input input-bordered"
+                name="time"
+                defaultValue={data.time}
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-xl ">Stock Status</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Available product quantity "
+                className="input input-bordered"
+                name="stock"
+                defaultValue={data?.stock}
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-xl">User Email</span>
+              </label>
+              <input
+                type="text"
+                value={user?.email}
+                className="input input-bordered"
+                name="email"
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-xl">User Name</span>
+              </label>
+              <input
+                type="text"
+                value={user?.displayName}
+                className="input input-bordered"
+                name="displayName"
+              />
+            </div>
 
-          <div className="form-control mt-6 col-span-2">
-            <button className="btn btn-primary">Update Equipment</button>
-          </div>
-        </form>
+            <div className="form-control mt-6 col-span-2">
+              <button className="btn bg-purple-600 text-white font-medium text-xl w-1/2 mx-auto">
+                Update Equipment
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );
