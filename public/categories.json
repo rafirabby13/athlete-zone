@@ -2,56 +2,56 @@
     {
       "id": 1,
       "name": "Soccer",
-      "image": "/images/soccer.jpg",
+      "image": "https://i.ibb.co.com/T0ndhwy/nwsl-1733424096748-min.jpg",
       "description": "Explore premium soccer gear, apparel, and accessories.",
       "cta": "Shop Soccer"
     },
     {
       "id": 2,
       "name": "Basketball",
-      "image": "/images/basketball.jpg",
+      "image": "https://i.ibb.co.com/rHBskwd/basketball-7121617-1920-min.jpg",
       "description": "Top-quality basketball equipment for the court.",
       "cta": "Shop Basketball"
     },
     {
       "id": 3,
       "name": "Tennis",
-      "image": "/images/tennis.jpg",
+      "image": "https://i.ibb.co.com/M5wCPBQ/tennis-923659-1920-min.jpg",
       "description": "Gear up with rackets, balls, and apparel for tennis.",
       "cta": "Shop Tennis"
     },
     {
       "id": 4,
       "name": "Running",
-      "image": "/images/running.jpg",
+      "image": "https://i.ibb.co.com/7pth6bk/running-7056590-1920-min.jpg",
       "description": "High-performance running shoes and accessories.",
       "cta": "Shop Running"
     },
     {
       "id": 5,
       "name": "Yoga & Pilates",
-      "image": "/images/yoga.jpg",
+      "image": "https://i.ibb.co.com/0qPtLsH/yoga-2471181-1920-min.jpg",
       "description": "Find yoga mats, blocks, and accessories to enhance your practice.",
       "cta": "Shop Yoga"
     },
     {
       "id": 6,
       "name": "Gym & Fitness",
-      "image": "/images/gym.jpg",
+      "image": "https://i.ibb.co.com/8XQyNSW/barbell-1839086-1920-min.jpg",
       "description": "Get gym equipment and fitness essentials.",
       "cta": "Shop Fitness"
     },
     {
       "id": 7,
       "name": "Swimming",
-      "image": "/images/swimming.jpg",
+      "image": "https://i.ibb.co.com/b3mBPWX/jonathan-chng-N3-VEi-HD8-Sec-unsplash-min.jpg",
       "description": "Swimwear, goggles, and accessories for all swimmers.",
       "cta": "Shop Swimming"
     },
     {
       "id": 8,
       "name": "Cycling",
-      "image": "/images/cycling.jpg",
+      "image": "https://i.ibb.co.com/fYFC0Lk/cyclists-1851269-1920-min.jpg",
       "description": "Cycling gear for enthusiasts and professionals.",
       "cta": "Shop Cycling"
     }
