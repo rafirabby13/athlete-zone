@@ -7,7 +7,7 @@
         "category": "Sale",
         "location": "Online Store",
         "description": "Get up to 50% off on all sports equipment and apparel. Don't miss out on the biggest sale of the year!",
-        "image": "https://example.com/images/summer-sale.jpg",
+        "image": "https://i.ibb.co.com/Gx763y9/398-min.jpg",
         "event_url": "https://example.com/summer-sale"
       },
       {
@@ -18,7 +18,7 @@
         "category": "Sports Camp",
         "location": "New York City Football Club Stadium",
         "description": "Join us for a 5-day football training camp with professional coaches to improve your skills and fitness.",
-        "image": "https://example.com/images/football-camp.jpg",
+        "image": "https://i.ibb.co.com/ZmfCXvv/medium-shot-kids-playing-football-min.jpg",
         "event_url": "https://example.com/football-camp"
       },
       {
@@ -29,7 +29,7 @@
         "category": "Tournament",
         "location": "Los Angeles Sports Arena",
         "description": "A week-long basketball tournament for all skill levels. Register now to compete for great prizes.",
-        "image": "https://example.com/images/basketball-tournament.jpg",
+        "image": "https://i.ibb.co.com/YLz5t4v/7045347-min.jpg",
         "event_url": "https://example.com/basketball-tournament"
       },
       {
@@ -40,7 +40,7 @@
         "category": "Exhibition Match",
         "location": "Miami Tennis Stadium",
         "description": "Watch the best tennis professionals go head-to-head in an exclusive exhibition match.",
-        "image": "https://example.com/images/tennis-exhibition.jpg",
+        "image": "https://i.ibb.co.com/1rP7fn6/tennis-5782695-1920-min.jpg",
         "event_url": "https://example.com/tennis-exhibition"
       },
       {
@@ -51,7 +51,7 @@
         "category": "Fitness Program",
         "location": "Citywide (Multiple Locations)",
         "description": "Get ready for the big race with our marathon training program. Sign up for expert coaching and fitness sessions.",
-        "image": "https://example.com/images/marathon-training.jpg",
+        "image": "https://i.ibb.co.com/FnYtQQs/marathon-7575499-1920-min.jpg",
         "event_url": "https://example.com/marathon-training"
       }
     ]
