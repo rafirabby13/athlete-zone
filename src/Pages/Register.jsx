@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 const Register = () => {
 
@@ -18,22 +19,51 @@ const {registerUser, setUser, updateUserProfile, googleLogin} = useContext(AuthC
         const photo = form.photo.value;
         const password = form.password.value;
         console.log(name, email, password, photo);
-        registerUser(email, password)
-        .then(res=>{
-            // console.log(res.user);
-            setUser(res.user)
-            updateUserProfile(name, photo)
-            .then(()=>{
-                toast.success('Registered Successfully')
-                form.reset()
-            })
-            .catch(err=>{
-                console.log(err.message);
-            })
-        })
-        .catch(err=>{
-            console.log(err.message);
-        })
+        const  capital = /(?=.*[A-Z])/;
+        const  small = /(?=.*[a-z])/;
+        if (password.length > 5) {
+          if (capital.test(password)) {
+            if (small.test(password)) {
+              registerUser(email, password)
+              .then(res=>{
+                  // console.log(res.user);
+                  setUser(res.user)
+                  updateUserProfile(name, photo)
+                  .then(()=>{
+                      toast.success('Registered Successfully')
+                      form.reset()
+                  })
+                  .catch(err=>{
+                      console.log(err.message);
+                  })
+              })
+              .catch(err=>{
+                  console.log(err.message);
+              })
+            } else {
+              Swal.fire({
+                title: "Sign Up Failed!",
+                text: "Password must contain a small letter",
+                icon: "error"
+              });
+            }
+            
+          } else {
+            Swal.fire({
+              title: "Sign Up Failed!",
+              text: "Password must contain a CAPITAL letter",
+              icon: "error"
+            });
+          }
+        }
+        else{
+          Swal.fire({
+            title: "Sign Up Failed!",
+            text: "Password must be at least 6 character",
+            icon: "error"
+          });
+        }
+       
 
     }
 
