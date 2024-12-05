@@ -10,16 +10,20 @@ const Navbar = () => {
   const items = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink className={({isActive})=> isActive? 'bg-fuchsia-700 text-white' :
+         ''} to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/allSports">All Sports Equipment</NavLink>
+        <NavLink className={({isActive})=> isActive? 'bg-fuchsia-700 text-white' :
+         ''}   to="/allSports">All Sports Equipment</NavLink>
       </li>
       <li>
-        <NavLink to="/addEquipment">Add Equipment</NavLink>
+        <NavLink className={({isActive})=> isActive? 'bg-fuchsia-700 text-white' :
+         ''}  to="/addEquipment">Add Equipment</NavLink>
       </li>
       <li>
-        <NavLink to={`/myEquipment`}>My Equipment List</NavLink>
+        <NavLink className={({isActive})=> isActive? 'bg-fuchsia-700 text-white' :
+         ''}  to={`/myEquipment`}>My Equipment List</NavLink>
       </li>
     </>
   );
@@ -43,9 +47,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="py-7">
-      <div className="navbar bg-base-100">
-        <div className="navbar-start">
+    <div className="py-7 bg-green-100">
+      <div className="navbar  lg:px-28">
+        <div className="navbar-start ">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg

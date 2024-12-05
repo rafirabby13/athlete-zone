@@ -6,7 +6,7 @@ import Footer from "../Shared/Footer.jsx";
 
 const Root = () => {
   return (
-    <div className="max-w-[85%] mx-auto">
+    <div >
       <section>
         <Navbar />
       </section>

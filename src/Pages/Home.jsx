@@ -9,12 +9,15 @@ import Footer from "../Shared/Footer.jsx";
 import Navbar from "../Shared/Navbar.jsx";
 
 import "react-toastify/dist/ReactToastify.css";
+import Products from "../components/Products.jsx";
 const Home = () => {
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 max-w-[85%] mx-auto">
      
       <section><Banner /></section>
-     
+     <section>
+      <Products/>
+     </section>
       <section><SportsCategories /></section>
       <section><UpcomingEvents/></section>
       <section><TrendingNow/></section>

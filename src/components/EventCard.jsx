@@ -2,7 +2,7 @@
 const EventCard = ({ event }) => {
   const { date, year, title, location, description, image } = event;
   return (
-    <div className="flex items-center justify-between bg-white  rounded-lg p-6 mb-8">
+    <div className="flex events items-center justify-between bg-white  rounded-lg p-6 mb-8">
       <div className="flex flex-col w-1/3">
         <span className="text-xl font-bold text-gray-800">{date}</span>
         <span className="text-sm text-gray-500">{year}</span>
