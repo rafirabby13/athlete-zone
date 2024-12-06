@@ -13,14 +13,14 @@ const Root = () => {
 
   return (
     <div id={theme}>
-      <section>
+      {/* <section>
         <Navbar />
-      </section>
+      </section> */}
      
       <Outlet />
-      <section>
+      {/* <section>
         <Footer />
-      </section>
+      </section> */}
       <ToastContainer
         position="top-center"
         autoClose={1000}

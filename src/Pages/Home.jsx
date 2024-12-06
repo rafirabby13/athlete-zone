@@ -12,11 +12,11 @@ import "react-toastify/dist/ReactToastify.css";
 import Products from "../components/Products.jsx";
 const Home = () => {
   return (
-    <div className="space-y-10 max-w-[85%] mx-auto pb-20">
-       <section>
+    <div className="space-y-10 lg:max-w-[85%] mx-auto pb-20">
+        <section>
         <Banner />
       </section>
-      <section>
+      {/*<section>
         <Products />
       </section>
       <section>
@@ -27,7 +27,7 @@ const Home = () => {
       </section>
       <section>
         <TrendingNow />
-      </section> 
+      </section>  */}
     </div>
   );
 };

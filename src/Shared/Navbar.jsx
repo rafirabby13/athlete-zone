@@ -82,14 +82,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className="py-7 nav">
+    <div className="py-1 lg:py-7 nav">
       <div className="navbar  lg:px-28">
         <div className="navbar-start ">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className=" lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-8 w-8"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -109,7 +109,7 @@ const Navbar = () => {
               {items}
             </ul>
           </div>
-          <Fade  direction="up" duration={400} onVisibilityChange={true} damping={0.1}>
+          <Fade className="hidden md:flex"  direction="up" duration={400} onVisibilityChange={true} damping={0.1}>
             <Link to="/" className="text-3xl font-bold">
               AthleteZone
             </Link>
@@ -123,7 +123,7 @@ const Navbar = () => {
             <div className="flex items-center gap-4">
               <img
                 data-tooltip-id="my-tooltip"
-                className="h-16 w-16 rounded-3xl"
+                className="h-12 lg:h-16 lg:w-16 rounded-3xl"
                 src={user?.photoURL}
                 alt=""
               />
@@ -141,12 +141,12 @@ const Navbar = () => {
                   <h3>{user?.displayName}</h3>
                 </div>
               </Tooltip>
-              <Link onClick={handleLogout} className="btn">
+              <Link  onClick={handleLogout} className="btn p-2 text-sm">
                 Logout
               </Link>
             </div>
           ) : (
-            <Link className="btn" to="/login">
+            <Link className="btn p-2" to="/login">
               Login
             </Link>
           )}
@@ -154,7 +154,7 @@ const Navbar = () => {
         <div
           data-tooltip-id="toggle"
           onClick={handleTheme}
-          className="text-7xl ml-5 font-normal "
+          className="text-3xl lg:text-7xl pl-3 lg:ml-5 font-normal "
         >
           {theme == "light" ? <FaToggleOff /> : <FaToggleOn />}
         </div>
