@@ -18,9 +18,9 @@ const Root = () => {
       </section> */}
      
       <Outlet />
-      {/* <section>
+      <section>
         <Footer />
-      </section> */}
+      </section>
       <ToastContainer
         position="top-center"
         autoClose={1000}

@@ -22,11 +22,11 @@ const UpcomingEvents = () => {
         <div className="flex justify-center"><span className="loading loading-bars loading-lg mx-auto"></span></div>
       ) : (
         <div>
-          <div className="w-3/4 mx-auto space-y-8 py-10 text-center">
-            <h1 className="text-4xl font-bold p-4 shadow-purple-600 shadow-md">
+          <div className="md:w-3/4 mx-auto space-y-8 py-10 text-center">
+            <h1 className="text-2xl md:text-4xl font-bold p-4 shadow-purple-600 shadow-md">
               Upcoming Events
             </h1>
-            <p className="text-xl">
+            <p className="text-lg md:text-xl">
               
               Stay updated with our latest sports events and activities. From
               training camps to tournaments, explore opportunities to showcase

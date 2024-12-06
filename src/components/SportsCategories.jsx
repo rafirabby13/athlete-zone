@@ -24,11 +24,11 @@ const SportsCategories = () => {
         <div className="flex justify-center"><span className="loading loading-bars loading-lg mx-auto"></span></div>
       ) : (
         <div>
-          <div className="w-3/4 mx-auto space-y-8 py-10 text-center">
-            <h1 className="text-4xl font-bold p-4 shadow-purple-600 shadow-md">
+          <div className="md:w-3/4 mx-auto space-y-8 py-10 text-center">
+            <h1 className="text-2xl md:text-4xl font-bold p-4 shadow-purple-600 shadow-md">
               Sports Categories
             </h1>
-            <p className="text-xl">
+            <p className="text-lg md:text-xl">
               Discover a wide variety of sports categories designed to match
               your passion and skill. Whether you're a beginner or a pro, find
               the perfect gear and equipment to elevate your game and embrace
@@ -36,7 +36,7 @@ const SportsCategories = () => {
             </p>
           </div>
           <div
-            className="grid grid-cols-3 gap-6
+            className="grid grid-cols-1 md:grid-cols-3 gap-6
             "
           >
             {categories.map((category, i) => (

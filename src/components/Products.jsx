@@ -36,18 +36,18 @@ const Products = () => {
         </h1>
       ) : (
         <div>
-          <div className="w-3/4 mx-auto space-y-8 py-10 text-center">
-            <h1 className="text-4xl font-bold p-4 shadow-purple-600 shadow-md">
+          <div className="md:w-3/4 mx-auto space-y-8 py-10 text-center">
+            <h1 className="text-2xl md:text-4xl font-bold p-4 shadow-purple-600 shadow-md">
               Our Products
             </h1>
-            <p className="text-xl">
+            <p className="text-lg md:text-xl">
               Explore our diverse range of products, thoughtfully crafted to
               meet your needs and enhance your lifestyle. From top-quality
               essentials to innovative solutions, we bring you the best to fuel
               your passions and elevate your experiences
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {products?.map((product, i) => (
               <Fade
                 cascade
