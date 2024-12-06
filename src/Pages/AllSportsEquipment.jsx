@@ -1,19 +1,31 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider.jsx";
 
 const AllSportsEquipment = () => {
   // const loadedData = useLoaderData();
   // console.log(data);
   const [data, setData] = useState([]);
+  const { dataLoading, setDataLoading } = useContext(AuthContext);
 
   useEffect(() => {
     fetch("http://localhost:5000/equipment")
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
-        setData(data);
+        console.log(data);
+        // if (data.length > 0) {
+          setData(data);
+        //   setDataLoading(false)
+        // }
+        // else{
+        //   console.log('object');
+        //   setDataLoading(true)
+
+        // }
+          
+        
       });
-  }, []);
+  }, [ setDataLoading]);
 
   const handleSorting = (e) => {
     e.preventDefault();
@@ -34,20 +46,33 @@ const AllSportsEquipment = () => {
     }
   };
 
+  // if (dataLoading) {
+  //   console.log(dataLoading);
+  //   return <span className="loading loading-spinner loading-lg"></span>
+
+  // }
+
   return (
-    <div className="min-h-screen py-20">
+    <div>
+      {
+      dataLoading ? 'loading'
+      :
+      <div className="min-h-screen py-20">
       <div className="flex items-center justify-between p-20">
         <h1 className="w-fit  text-4xl font-bold p-4 shadow-purple-600 shadow-md text-center mb-2">
           All Sports Equipment
         </h1>
-       
-        
-          <select className="border-2 p-4 rounded-lg bg-purple-500 text-white text-2xl font-semibold" name="sorting" onChange={handleSorting} selected="Sort">
-            <option selected>Sort</option>
-            <option value="ascending">Ascending</option>
-            <option value="descending">Descending</option>
-          </select>
-       
+
+        <select
+          className="border-2 p-4 rounded-lg bg-purple-500 text-white text-2xl font-semibold"
+          name="sorting"
+          onChange={handleSorting}
+          selected="Sort"
+        >
+          <option selected>Sort</option>
+          <option value="ascending">Ascending</option>
+          <option value="descending">Descending</option>
+        </select>
       </div>
       <div className="overflow-x-auto">
         <table className="table  border-2 text-center">
@@ -88,6 +113,8 @@ const AllSportsEquipment = () => {
           </tbody>
         </table>
       </div>
+    </div>
+    }
     </div>
   );
 };

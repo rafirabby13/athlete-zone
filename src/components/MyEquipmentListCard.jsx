@@ -35,7 +35,7 @@ const MyEquipmentListCard = ({ myEquipments , handleDelete}) => {
 
   return (
     <div>
-      <div className="relative bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg hover:ring-2 hover:ring-indigo-500 transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between h-full">
+      <div className="relative bg-white myEquipment shadow-md rounded-lg overflow-hidden hover:shadow-lg hover:ring-2 hover:ring-indigo-500 transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between h-full">
         {/* Decorative Badge */}
         <div className="absolute top-3 left-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold px-4 py-1 rounded-full shadow-lg">
           {category}
@@ -52,12 +52,12 @@ const MyEquipmentListCard = ({ myEquipments , handleDelete}) => {
 
         <div className="p-5">
           {/* Product Name */}
-          <h3 className="text-lg font-semibold text-gray-800 truncate">
+          <h3 className="text-lg font-semibold  truncate">
             {name}
           </h3>
 
           {/* Description */}
-          <p className="text-sm text-gray-600 mt-2 line-clamp-3 leading-relaxed">
+          <p className="text-sm  mt-2 line-clamp-3 leading-relaxed">
             {description}
           </p>
 
@@ -69,7 +69,7 @@ const MyEquipmentListCard = ({ myEquipments , handleDelete}) => {
           <div className="mt-3 flex items-center justify-between">
             <div className="flex items-center space-x-1 text-yellow-400">
               <FaStar />
-              <span className="text-gray-700 font-medium">{rating}/5</span>
+              <span className="font-medium">{rating}/5</span>
             </div>
           </div>
 

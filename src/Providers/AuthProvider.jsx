@@ -1,12 +1,14 @@
 /* eslint-disable react/prop-types */
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import auth from "../Firebase/firebase.init.js";
 export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
+    const [theme, setTheme] = useState('light')
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [dataLoading, setDataLoading] = useState(false);
  
 
 
@@ -61,7 +63,12 @@ const AuthProvider = ({ children }) => {
     loginUser,
     googleLogin,
     logoutUser,
-    setLoading
+    setLoading,
+    dataLoading,
+    setDataLoading,
+    theme,
+    setTheme
+
    
   };
   return (

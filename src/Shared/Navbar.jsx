@@ -4,26 +4,52 @@ import { AuthContext } from "../Providers/AuthProvider.jsx";
 import Swal from "sweetalert2";
 import { Tooltip } from "react-tooltip";
 import { Fade } from "react-awesome-reveal";
-import 'animate.css';
+import "animate.css";
+import { IoToggle } from "react-icons/io5";
+import { FaToggleOff, FaToggleOn } from "react-icons/fa";
 const Navbar = () => {
-  const { user, logoutUser } = useContext(AuthContext);
+  const { user, logoutUser, theme, setTheme } = useContext(AuthContext);
   const items = (
     <>
       <li>
-        <NavLink className={({isActive})=> isActive? 'bg-fuchsia-700 text-white' :
-         ''} to="/">Home</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "bg-fuchsia-700 text-white" : ""
+          }
+          to="/"
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink className={({isActive})=> isActive? 'bg-fuchsia-700 text-white' :
-         ''}   to="/allSports">All Sports Equipment</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "bg-fuchsia-700 text-white" : ""
+          }
+          to="/allSports"
+        >
+          All Sports Equipment
+        </NavLink>
       </li>
       <li>
-        <NavLink className={({isActive})=> isActive? 'bg-fuchsia-700 text-white' :
-         ''}  to="/addEquipment">Add Equipment</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "bg-fuchsia-700 text-white" : ""
+          }
+          to="/addEquipment"
+        >
+          Add Equipment
+        </NavLink>
       </li>
       <li>
-        <NavLink className={({isActive})=> isActive? 'bg-fuchsia-700 text-white' :
-         ''}  to={`/myEquipment`}>My Equipment List</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "bg-fuchsia-700 text-white" : ""
+          }
+          to={`/myEquipment`}
+        >
+          My Equipment List
+        </NavLink>
       </li>
     </>
   );
@@ -46,8 +72,14 @@ const Navbar = () => {
       });
   };
 
+  
+  const handleTheme =()=>{
+    setTheme(current=> current === 'light' ? 'dark' : 'light')
+    console.log(theme);
+  }
+
   return (
-    <div className="py-7 bg-green-100">
+    <div className="py-7 nav">
       <div className="navbar  lg:px-28">
         <div className="navbar-start ">
           <div className="dropdown">
@@ -74,10 +106,13 @@ const Navbar = () => {
               {items}
             </ul>
           </div>
-          <Fade  delay={1e3} cascade damping={1e-1}>
-          <Link to="/" className="animate__animated animate__zoomOutUp animate__slower animate__infinite text-2xl font-bold">
-            AthleteZone{" "}
-          </Link>
+          <Fade delay={1e3} cascade damping={1e-1}>
+            <Link
+              to="/"
+              className="animate__animated animate__zoomOutUp animate__slower animate__infinite text-2xl font-bold"
+            >
+              AthleteZone{" "}
+            </Link>
           </Fade>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -92,7 +127,16 @@ const Navbar = () => {
                 src={user?.photoURL}
                 alt=""
               />
-              <Tooltip variant="success" style={{background: 'purple', color: 'white' , fontSize: '16px'}} id="my-tooltip" className="z-50 bg-green-600 text-white">
+              <Tooltip
+                variant="success"
+                style={{
+                  background: "purple",
+                  color: "white",
+                  fontSize: "16px",
+                }}
+                id="my-tooltip"
+                className="z-50 bg-green-600 text-white"
+              >
                 <div>
                   <h3>{user?.displayName}</h3>
                 </div>
@@ -106,6 +150,31 @@ const Navbar = () => {
               Login
             </Link>
           )}
+        </div>
+        <div  data-tooltip-id="toggle" onClick={handleTheme} className="text-7xl ml-5 font-normal ">
+       
+          {
+          theme == "light"
+           ? <FaToggleOff /> 
+           : 
+           <FaToggleOn />
+           }
+        </div>
+        <div>
+        <Tooltip
+                variant="success"
+                style={{
+                  background: "blue",
+                  color: "white",
+                  fontSize: "16px",
+                }}
+                id="toggle"
+                className="z-50 bg-green-600 text-white"
+              >
+                 <div>
+                  <h3>{theme =='light' ? 'Light' : "Dark"}</h3>
+                </div>
+              </Tooltip>
         </div>
       </div>
     </div>

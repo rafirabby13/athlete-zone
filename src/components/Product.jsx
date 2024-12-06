@@ -7,18 +7,18 @@ const Product = ({ product }) => {
   const { _id, photo, name, category, description, price, rating, stock } =
     product;
   return (
-    <div className="relative group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow h-full flex flex-col justify-between border-2 border-transparent hover:border-gradient-to-r hover:from-blue-500 hover:to-purple-500">
+    <div className="relative group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow h-full flex flex-col justify-between border-2 border-transparent hover:border-gradient-to-r hover:from-blue-500 hover:to-purple-500 product">
     <img
       src={photo}
       alt={name}
       className="w-full h-60 object-cover group-hover:scale-105 transition-transform"
     />
     <div className="p-6">
-      <h2 className="text-lg font-bold text-gray-800 group-hover:text-blue-500 transition-transform transform group-hover:scale-105">
+      <h2 className="text-lg font-bold  group-hover:text-blue-500 transition-transform transform group-hover:scale-105">
         {name}
       </h2>
-      <p className="text-sm text-gray-600 mt-2">Category: {category}</p>
-      <p className="text-gray-500 mt-2 text-sm">{description}</p>
+      <p className="text-sm  mt-2">Category: {category}</p>
+      <p className=" mt-2 text-sm">{description}</p>
       <div className="flex items-center justify-between mt-4">
         <span className="text-xl font-semibold text-blue-600">${price}</span>
         <div className="flex items-center">

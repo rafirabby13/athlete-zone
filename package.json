@@ -12,6 +12,7 @@
   "dependencies": {
     "@ant-design/react-slick": "^1.1.2",
     "@emotion/react": "^11.13.5",
+    "@fluentui/react-switch": "^9.1.98",
     "animate.css": "^4.1.1",
     "firebase": "^11.0.2",
     "framer-motion": "^11.13.1",

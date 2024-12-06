@@ -34,7 +34,7 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="flex items-center gap-10  bg-gradient-to-r from-[#D4F6FF] via-[#FFFECB] to-[#FFF7D1]">
+          <div className="flex items-center gap-10  bg-gradient-to-r from-[#D4F6FF] via-[#FFFECB] to-[#FFF7D1] banner">
             <div className=" pl-12 w-2/5  space-y-4 ">
               <h1 className="text-4xl font-bold">Fresh Drops for Champions!</h1>
               <p className="text-xl">
@@ -48,7 +48,7 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex items-center gap-10 bg-gradient-to-l from-[#D4F6FF] via-[#FFFECB] to-[#FFF7D1]">
+          <div className="flex items-center gap-10 bg-gradient-to-l from-[#D4F6FF] via-[#FFFECB] to-[#FFF7D1] banner">
             <div className="">
               <img className="h-[600px] " src={b1} alt="" />
             </div>
@@ -65,7 +65,7 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex items-center gap-10 bg-gradient-to-r from-[#D4F6FF] via-[#FFF] to-[#DCBFFF]">
+          <div className="flex items-center gap-10 bg-gradient-to-r from-[#D4F6FF] via-[#FFF] to-[#DCBFFF] banner">
             <div className="">
               <img className="h-[600px] " src={b1} alt="" />
             </div>
@@ -83,7 +83,7 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex items-center gap-10 bg-gradient-to-r from-[#D4F6FF] via-[#FFF] to-[#BFF6C3]">
+          <div className="flex items-center gap-10 bg-gradient-to-r from-[#D4F6FF] via-[#FFF] to-[#BFF6C3] banner">
             <div className=" pl-12 w-2/5   space-y-4">
               <h1 className="text-4xl font-bold">Train Like a Pro!</h1>
               <p className="text-xl">
@@ -100,7 +100,7 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex items-center gap-10 bg-gradient-to-r from-[#D4F6FF] via-[#FFF] to-[#BFF6C3]">
+          <div className="flex items-center gap-10 bg-gradient-to-r from-[#D4F6FF] via-[#FFF] to-[#BFF6C3] banner">
             <div className="">
               <img className="h-[600px] " src={b5} alt="" />
             </div>

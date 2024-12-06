@@ -13,17 +13,21 @@ import Products from "../components/Products.jsx";
 const Home = () => {
   return (
     <div className="space-y-10 max-w-[85%] mx-auto pb-20">
-     
-      <section><Banner /></section>
-     <section>
-      <Products/>
-     </section>
-      <section><SportsCategories /></section>
-      <section><UpcomingEvents/></section>
-      <section><TrendingNow/></section>
-      
-     
-      
+      <section>
+        <Banner />
+      </section>
+      <section>
+        <Products />
+      </section>
+      <section>
+        <SportsCategories />
+      </section>
+      <section>
+        <UpcomingEvents />
+      </section>
+      <section>
+        <TrendingNow />
+      </section>
     </div>
   );
 };

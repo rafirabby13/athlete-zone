@@ -61,7 +61,7 @@ const AddEquipment = () => {
         Add Equipment
       </h1>
       <div className="min-h-screen">
-        <div className="card bg-base-100 w-full  shrink-0 shadow-2xl rounded-none">
+        <div className="card bg-base-100 addEquipment w-full  shrink-0 shadow-2xl rounded-none">
           <form
             className="card-bod grid grid-cols-3 gap-4 p-16"
             onSubmit={handleAddEquipment}

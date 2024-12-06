@@ -18,3 +18,79 @@ body{
 
 
 }
+
+#light{
+    background-color: white;
+}
+#dark{
+    background-color: rgba(0, 0, 0, 0.826);
+    color: white;
+}
+
+#light .nav{
+    background-color: #ECDFCC;
+}
+#dark .nav{
+    background-color: #432E54;
+    color: white;
+}
+#dark .banner{
+    background: linear-gradient(90deg, #1A3636, #432E54);
+    color: white;
+}
+#light .product{
+    color: rgb(40, 32, 32);
+}
+
+#dark .product{
+    background: linear-gradient(0deg, #1A3636, #432E54);
+    color: white;
+}
+
+
+#dark .sports{
+    background: linear-gradient(0deg, #1A3636, #432E54);
+    color: white;
+}
+#dark .events{
+    background: linear-gradient(-90deg, #1A3636, #432E54);
+    color: white;
+}
+
+#light .trend{
+    color: rgb(255, 247, 247);
+}
+#dark .trend{
+    background:  #432E54;
+    color: rgba(255, 255, 255, 0.639);
+}
+
+
+
+#light .trendingCard{
+   color: rgb(44, 42, 42);
+}
+#dark .trendingCard{
+    background:  #2a044a;
+    color: rgba(255, 255, 255, 0.655);
+}
+
+
+#light .foote{
+    color: rgb(44, 42, 42);
+ }
+ #dark .foote{
+     background:  #432E54;
+     color: rgba(255, 255, 255, 0.908);
+ }
+
+ 
+ #dark .myEquipment{
+    background:  #1A3636;
+    color: rgba(255, 255, 255, 0.655);
+}
+
+#dark .addEquipment{
+    background:  #757b7b;
+    color: rgba(255, 255, 255, 0.655);
+}

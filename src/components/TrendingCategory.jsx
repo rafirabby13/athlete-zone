@@ -19,7 +19,7 @@ const TrendingCategory = ({handleSearch}) => {
   return (
     <div className="flex justify-between text-2xl gap-4 p-6 ">
       {trendingCategory.map((trending, i) => (
-        <div key={i} className="p-4 w-full border-2 text-center bg-purple-400" onClick={()=> handleSearch(trending.category)}>
+        <div key={i} className="p-4 w-full  text-center bg-[#432E54] trend" onClick={()=> handleSearch(trending.category)}>
           <p ><NavLink className=''>{trending.category}</NavLink></p>
         </div>
       ))}
