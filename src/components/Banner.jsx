@@ -6,12 +6,12 @@ import b2 from "../assets/b2.jpg";
 import b3 from "../assets/b3.jpg";
 import b4 from "../assets/b4.jpg";
 import b5 from "../assets/b5.jpg";
-import football from '../../public/football.json'
-import champion from '../../public/champ.json'
-import sale from '../../public/sale.json'
+import football from "../../public/football.json";
+import champion from "../../public/champ.json";
+import sale from "../../public/sale.json";
 import { SwiperSlide, Swiper } from "swiper/react";
-import choise from '../../public/choise.json'
-import gear from '../../public/Animation - 1733507131405.json'
+import choise from "../../public/choise.json";
+import gear from "../../public/Animation - 1733507131405.json";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -47,17 +47,27 @@ const Banner = () => {
               </button>
             </div>
             <div className="w-3/5">
-            <Lottie style={{height: '600px'}} animationData={champion} loop={true} />
+              <Lottie
+                style={{ height: "600px" }}
+                animationData={champion}
+                loop={true}
+              />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="flex items-center gap-10 bg-gradient-to-l from-[#D4F6FF] via-[#FFFECB] to-[#FFF7D1] banner">
-          <div className="w-3/5">
-            <Lottie style={{height: '600px'}} animationData={gear} loop={true} />
+            <div className="w-3/5">
+              <Lottie
+                style={{ height: "600px" }}
+                animationData={gear}
+                loop={true}
+              />
             </div>
-            <div className=" pr-12 w-2/5  
-             space-y-4">
+            <div
+              className=" pr-12 w-2/5  
+             space-y-4"
+            >
               <h1 className="text-4xl font-bold">Gear Up for Every Sport!</h1>
               <p className="text-xl">
                 Discover premium sports accessories for all your needs.
@@ -70,8 +80,12 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="flex items-center gap-10 bg-gradient-to-r from-[#D4F6FF] via-[#FFF] to-[#DCBFFF] banner">
-          <div className="w-3/5">
-            <Lottie style={{height: '600px'}} animationData={choise} loop={true} />
+            <div className="w-3/5">
+              <Lottie
+                style={{ height: "600px" }}
+                animationData={choise}
+                loop={true}
+              />
             </div>
             <div className=" pr-12 w-2/5   space-y-4">
               <h1 className="text-4xl font-bold">
@@ -99,7 +113,11 @@ const Banner = () => {
               </button>
             </div>
             <div className="w-3/5">
-            <Lottie style={{height: '600px'}} animationData={football} loop={true} />
+              <Lottie
+                style={{ height: "600px" }}
+                animationData={football}
+                loop={true}
+              />
             </div>
             {/* <div className="w-2/5">
               <img className="h-[600px] " src={b4} alt="" />
@@ -108,8 +126,12 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="flex items-center gap-10 bg-gradient-to-r from-[#D4F6FF] via-[#FFF] to-[#BFF6C3] banner">
-          <div className="w-3/5">
-            <Lottie style={{height: '600px'}} animationData={sale} loop={true} />
+            <div className="w-3/5">
+              <Lottie
+                style={{ height: "600px" }}
+                animationData={sale}
+                loop={true}
+              />
             </div>
             <div className=" pr-12 w-2/5   space-y-4">
               <h1 className="text-4xl font-bold">Season’s Biggest Sale!</h1>
