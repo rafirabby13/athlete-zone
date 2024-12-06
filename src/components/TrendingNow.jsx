@@ -43,9 +43,9 @@ const TrendingNow = () => {
       <TrendingCategory handleSearch={handleSearch}></TrendingCategory>
 
       <div className="grid grid-cols-3 gap-4">
-        {trendingCategories.map((category) => (
+        {trendingCategories.map((category,i) => (
           <TresndingCards
-            key={category.id}
+            key={i}
             categoryy={category}
           ></TresndingCards>
         ))}

@@ -1,12 +1,14 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
+import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
   const { _id, photo, name, category, description, price, rating, stock } =
     product;
   return (
+   
     <div className="relative group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow h-full flex flex-col justify-between border-2 border-transparent hover:border-gradient-to-r hover:from-blue-500 hover:to-purple-500 product">
     <img
       src={photo}
@@ -56,6 +58,7 @@ const Product = ({ product }) => {
       {category}
     </div>
   </div>
+  
   );
 };
 

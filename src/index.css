@@ -1,96 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Acme&family=Archivo+Black&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Acme&family=Archivo+Black&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Archivo+Black&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Archivo+Black&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Archivo+Black&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body{
-    font-family: "Ubuntu", sans-serif;
-
-
+body {
+  font-family: "Ubuntu", sans-serif;
 }
 
-.events{
-    font-family: "Kanit", sans-serif;
-
-
-
+.events {
+  font-family: "Kanit", sans-serif;
 }
 
-#light{
-    background-color: white;
-}
-#dark{
-    background-color: rgba(0, 0, 0, 0.826);
-    color: white;
+.banner {
+  font-family: "Kanit", serif;
 }
 
-#light .nav{
-    background-color: #ECDFCC;
+#light {
+  background-color: white;
 }
-#dark .nav{
-    background-color: #432E54;
-    color: white;
-}
-#dark .banner{
-    background: linear-gradient(90deg, #1A3636, #432E54);
-    color: white;
-}
-#light .product{
-    color: rgb(40, 32, 32);
+#dark {
+  background-color: rgba(0, 0, 0, 0.826);
+  color: white;
 }
 
-#dark .product{
-    background: linear-gradient(0deg, #1A3636, #432E54);
-    color: white;
+#light .nav {
+  background-color: #ecdfcc;
+}
+#dark .nav {
+  background-color: #432e54;
+  color: white;
+}
+#dark .banner {
+  background: linear-gradient(90deg, #1a3636, #432e54);
+  color: white;
+}
+#light .product {
+  color: rgb(40, 32, 32);
 }
 
-
-#dark .sports{
-    background: linear-gradient(0deg, #1A3636, #432E54);
-    color: white;
-}
-#dark .events{
-    background: linear-gradient(-90deg, #1A3636, #432E54);
-    color: white;
+#dark .product {
+  background: linear-gradient(0deg, #1a3636, #432e54);
+  color: white;
 }
 
-#light .trend{
-    color: rgb(255, 247, 247);
+#dark .sports {
+  background: linear-gradient(0deg, #1a3636, #432e54);
+  color: white;
 }
-#dark .trend{
-    background:  #432E54;
-    color: rgba(255, 255, 255, 0.639);
-}
-
-
-
-#light .trendingCard{
-   color: rgb(44, 42, 42);
-}
-#dark .trendingCard{
-    background:  #2a044a;
-    color: rgba(255, 255, 255, 0.655);
+#dark .events {
+  background: linear-gradient(-90deg, #1a3636, #432e54);
+  color: white;
 }
 
-
-#light .foote{
-    color: rgb(44, 42, 42);
- }
- #dark .foote{
-     background:  #432E54;
-     color: rgba(255, 255, 255, 0.908);
- }
-
- 
- #dark .myEquipment{
-    background:  #1A3636;
-    color: rgba(255, 255, 255, 0.655);
+#light .trend {
+  color: rgb(255, 247, 247);
+}
+#dark .trend {
+  background: #432e54;
+  color: rgba(255, 255, 255, 0.639);
 }
 
-#dark .addEquipment{
-    background:  #757b7b;
-    color: rgba(255, 255, 255, 0.655);
+#light .trendingCard {
+  color: rgb(44, 42, 42);
+}
+#dark .trendingCard {
+  background: #2a044a;
+  color: rgba(255, 255, 255, 0.655);
+}
+
+#light .foote {
+  color: rgb(44, 42, 42);
+}
+#dark .foote {
+  background: #432e54;
+  color: rgba(255, 255, 255, 0.908);
+}
+
+#dark .myEquipment {
+  background: #1a3636;
+  color: rgba(255, 255, 255, 0.655);
+}
+
+#dark .addEquipment {
+  background: #757b7b;
+  color: rgba(255, 255, 255, 0.655);
 }

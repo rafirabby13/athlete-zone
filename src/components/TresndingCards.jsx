@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React from 'react';
 
@@ -5,7 +6,7 @@ const TresndingCards = ({categoryy}) => {
     const {image, name, badge, description, category, price, discount, brand
     } = categoryy
     return (
-        <div className="rounded overflow-hidden shadow-lg  m-4  p-5 flex flex-col justify-between trendingCard">
+        <div className="rounded overflow-hidden shadow-lg  m-4   flex flex-col justify-between trendingCard">
       <img
         className="w-full h-64 object-cover"
         src={image}
