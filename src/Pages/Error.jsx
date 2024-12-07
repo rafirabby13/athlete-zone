@@ -1,11 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
+import Lottie from "lottie-react";
 import { Link } from "react-router-dom";
-
+import errr from '../../public/404.json'
 const Error = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-6">
       <div className="text-center">
-        <h1 className="text-6xl font-bold text-red-500">404</h1>
+        <p className="w-full">
+        <Lottie className="h-48" animationData={errr} loop={true} />
+        </p>
         <h2 className="text-2xl font-semibold text-gray-800 mt-4">
           Oops! Page Not Found
         </h2>
