@@ -10,7 +10,7 @@ const MyEquipmentList = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/equip/${user?.email}`)
+    fetch(`https://athlete-zone-server.vercel.app/equip/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -33,7 +33,7 @@ const MyEquipmentList = () => {
     }).then((result) => {
       if (result.isConfirmed) {
        
-        fetch(`http://localhost:5000/equipment/${id}`, {
+        fetch(`https://athlete-zone-server.vercel.app/equipment/${id}`, {
           method: "DELETE",
           headers: {
             "Content-type": "application/json",

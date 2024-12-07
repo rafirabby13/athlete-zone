@@ -39,7 +39,7 @@ const UpdateEquipment = () => {
       displayName,
     };
     console.log(equipment);
-    fetch(`http://localhost:5000/equip/${data._id}`, {
+    fetch(`https://athlete-zone-server.vercel.app/equip/${data._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useContext, useEffect, useState } from "react";
 import Product from "./Product.jsx";
 import { Fade } from "react-awesome-reveal";
@@ -10,7 +11,7 @@ const Products = () => {
 
   useEffect(() => {
     setDataLoading(true);
-    fetch("http://localhost:5000/products")
+    fetch("https://athlete-zone-server.vercel.app/products")
       .then((res) => res.json())
       .then((data) => {
         setDataLoading(false);
@@ -22,18 +23,7 @@ const Products = () => {
   return (
     <div>
       {dataLoading ? (
-        <h1 className="text-5xl w-fit mx-auto">
-          <TailSpin
-            visible={true}
-            height="80"
-            width="80"
-            color="#4fa94d"
-            ariaLabel="tail-spin-loading"
-            radius="1"
-            wrapperStyle={{}}
-            wrapperClass=""
-          />
-        </h1>
+        <div className="flex justify-center"><span className="loading loading-bars loading-lg mx-auto"></span></div>
       ) : (
         <div>
           <div className="md:w-3/4 mx-auto space-y-8 py-10 text-center">
@@ -52,7 +42,8 @@ const Products = () => {
               <Fade
                 cascade
                 delay={i * 200}
-                direction="up"
+                direction="left"
+                triggerOnce={true}
                 damping={0.1}
                 key={i}
               >

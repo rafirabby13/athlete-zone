@@ -49,7 +49,7 @@ const AllSportsDetail = () => {
                   : "bg-red-100 text-red-600"
               }`}
             >
-              {stock}
+              Delivery time: {time} days
             </span>
           </div>
 
@@ -70,7 +70,7 @@ const AllSportsDetail = () => {
               Added by <span className="font-bold">{displayName}</span>
             </p>
             <p>
-              Available until: <span className="font-bold">{time}</span>
+              Available until: <span className="font-bold">{stock}</span>
             </p>
             <p>
               Email: <span className="font-bold">{email}</span>

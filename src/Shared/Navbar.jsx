@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
 import animationData from "../../public/animation.json";
@@ -12,13 +12,14 @@ import { FaToggleOff, FaToggleOn } from "react-icons/fa";
 import Lottie from "lottie-react";
 import { keyframes } from "@emotion/react";
 const Navbar = () => {
+  const [hide, setHide] = useState(true)
   const { user, logoutUser, theme, setTheme } = useContext(AuthContext);
   const items = (
     <>
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive ? "bg-fuchsia-700 font-bold text-white" : "font-bold"
+            isActive ? "bg-fuchsia-700 font-bold text-white text-xl" : "font-bold"
           }
           to="/"
         >
@@ -28,7 +29,7 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive ? "bg-fuchsia-700 font-bold text-white" : "font-bold"
+            isActive ? "bg-fuchsia-700 font-bold text-white text-xl" : "font-bold"
           }
           to="/allSports"
         >
@@ -38,7 +39,7 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive ? "bg-fuchsia-700 font-bold text-white" : "font-bold"
+            isActive ? "bg-fuchsia-700 font-bold text-white text-xl" : "font-bold"
           }
           to="/addEquipment"
         >
@@ -48,7 +49,7 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive ? "bg-fuchsia-700 font-bold text-white" : "font-bold"
+            isActive ? "bg-fuchsia-700 font-bold text-white text-xl" : "font-bold"
           }
           to={`/myEquipment`}
         >
@@ -81,12 +82,14 @@ const Navbar = () => {
     console.log(theme);
   };
 
+  
+
   return (
     <div className="py-1 lg:py-7 nav ">
       <div className="navbar lg:px-4 xl:px-28">
         <div className="navbar-start ">
-          <div className="dropdown ">
-            <div tabIndex={0} role="button" className=" lg:hidden">
+          <div  className="dropdown ">
+            <div onClick={()=> setHide(false)} tabIndex={0} role="button" className=" lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-8 w-8"
@@ -102,11 +105,14 @@ const Navbar = () => {
                 />
               </svg>
             </div>
-            <ul
+            <ul onClick={()=> setHide(true)}
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow"
+              className={`menu menu-sm dropdown-content bg-base-100 space-y-3 rounded-box z-50 mt-3 drop w-52 p-4 shadow ${hide ? 'hidden' : ''}`}
             >
-              {items}
+              {
+                
+                items
+              }
             </ul>
           </div>
           <Fade className="hidden md:flex"  direction="up" duration={400} onVisibilityChange={true} damping={0.1}>

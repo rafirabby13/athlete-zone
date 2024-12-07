@@ -88,10 +88,10 @@ const {registerUser, setUser, updateUserProfile, googleLogin} = useContext(AuthC
       </Helmet>
       <div className="hero-conten flex-col  ">
         <div className="text-center  md:py-10">
-          <h1 className="text-2xl md:text-5xl font-bold">Register now!</h1>
+          <h1 className="text-2xl md:text-5xl font-bold pb-10">Register now!</h1>
         
         </div>
-        <div className="card  w-full max-w-xl mx-auto md:py-10 pb-7 md:pb-0  shrink-0 shadow-2xl">
+        <div className="card register w-full max-w-xl mx-auto md:py-10 pb-7 md:pb-0  shrink-0 shadow-2xl">
           <form className="card-body" onSubmit={handleSubmit}>
             <div className="form-control">
               <label className="label">

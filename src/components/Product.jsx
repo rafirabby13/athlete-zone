@@ -13,7 +13,7 @@ const Product = ({ product }) => {
     <img
       src={photo}
       alt={name}
-      className="w-full h-60 object-cover group-hover:scale-105 transition-transform"
+      className="w-full h-60  group-hover:scale-105 transition-transform"
     />
     <div className="p-6">
       <h2 className="text-lg font-bold  group-hover:text-blue-500 transition-transform transform group-hover:scale-105">
@@ -48,13 +48,13 @@ const Product = ({ product }) => {
             : "text-red-500"
         }`}
       >
-        {stock}
+        Available stock : {stock}
       </p>
       <button className="w-full mt-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:from-purple-500 hover:to-blue-500 transition">
         <Link to={`/allSports/${_id}`}>View Details</Link>
       </button>
     </div>
-    <div className="absolute top-4 right-4 bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full shadow-md transition-transform transform group-hover:scale-105 group-hover:bg-blue-500 group-hover:text-white">
+    <div className="absolute top-4 right-4 bg-purple-800 font-semibold shadow-lg  p-3 text-lg rounded-2xl  transition-transform transform group-hover:scale-105 group-hover:bg-blue-500 text-white">
       {category}
     </div>
   </div>

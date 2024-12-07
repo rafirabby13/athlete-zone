@@ -41,7 +41,7 @@ export const router = createBrowserRouter([
             {
                 path: '/allSports/:id',
                 element: <PrivateRoute><AllSportsDetail/></PrivateRoute>,
-                loader: ({params})=> fetch(`http://localhost:5000/equipment/${params.id}`)
+                loader: ({params})=> fetch(`https://athlete-zone-server.vercel.app/equipment/${params.id}`)
             },
             {
                 path: '/myEquipment',
@@ -50,7 +50,7 @@ export const router = createBrowserRouter([
             {
                 path: '/updateEquipment/:id',
                 element: <UpdateEquipment/>,
-                loader: ({params})=> fetch(`http://localhost:5000/equipment/${params.id}`)
+                loader: ({params})=> fetch(`https://athlete-zone-server.vercel.app/equipment/${params.id}`)
             }
         ]
     }

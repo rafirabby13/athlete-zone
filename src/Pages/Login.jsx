@@ -8,7 +8,7 @@ const Login = () => {
   const { setUser, loginUser , googleLogin} = useContext(AuthContext);
 
   const location = useLocation()
-  console.log(location);
+  // console.log(location);
 
   const navigate = useNavigate()
 
@@ -58,7 +58,7 @@ const Login = () => {
         <div className="text-center py-4 md:py-10">
           <h1 className="text-2xl underline md:text-5xl font-bold">Login now!</h1>
         </div>
-        <div className="card bg-base-100 w-full max-w-xl mx-auto md:py-10  shrink-0 shadow-2xl">
+        <div className="card register bg-base-100 w-full max-w-xl mx-auto md:py-10  shrink-0 shadow-2xl">
           <form className="card-body" onSubmit={handleSubmit}>
             <div className="form-control">
               <label className="label">

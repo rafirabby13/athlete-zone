@@ -10,10 +10,10 @@ const AllSportsEquipment = () => {
   const { dataLoading, setDataLoading } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch("http://localhost:5000/equipment")
+    fetch("https://athlete-zone-server.vercel.app/equipment")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         // if (data.length > 0) {
           setData(data);
         //   setDataLoading(false)

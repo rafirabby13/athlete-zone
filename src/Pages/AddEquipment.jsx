@@ -2,10 +2,11 @@ import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
 import { toast } from "react-toastify";
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
 
 const AddEquipment = () => {
   const { user } = useContext(AuthContext);
-
+const navigate = useNavigate()
   const handleAddEquipment = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -37,7 +38,7 @@ const AddEquipment = () => {
     };
     console.log(equipment);
 
-    fetch("http://localhost:5000/equipment", {
+    fetch("https://athlete-zone-server.vercel.app/equipment", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -49,6 +50,7 @@ const AddEquipment = () => {
         console.log(res);
         if (res.insertedId) {
           toast.success('Product Added Successfully')
+          navigate('/')
         }
       })
       .catch((err) => {

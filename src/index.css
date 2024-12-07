@@ -90,3 +90,16 @@ body {
   background: #757b7b;
   color: rgba(255, 255, 255, 0.655);
 }
+
+
+#dark .register{
+  background-color: #000000;
+}
+
+#dark .label{
+  background: #000000;
+}
+
+#dark .drop{
+  background-color: black;
+}
