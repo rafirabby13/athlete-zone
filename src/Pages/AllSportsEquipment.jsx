@@ -57,14 +57,14 @@ const AllSportsEquipment = () => {
       {
       dataLoading ? 'loading'
       :
-      <div className="min-h-screen py-20">
-      <div className="flex items-center justify-between p-20">
-        <h1 className="w-fit  text-4xl font-bold p-4 shadow-purple-600 shadow-md text-center mb-2">
+      <div className="min-h-screen py-4 md:py-20">
+      <div className="flex md:flex-row flex-col items-center justify-between p-5 md:p-20">
+        <h1 className=" md:w-fit  md:text-4xl font-bold p-4 shadow-purple-600 shadow-md text-center mb-2">
           All Sports Equipment
         </h1>
 
         <select
-          className="border-2 p-4 rounded-lg bg-purple-500 text-white text-2xl font-semibold"
+          className="border-2 p-4 rounded-lg bg-purple-500 text-white md:text-2xl font-semibold"
           name="sorting"
           onChange={handleSorting}
           selected="Sort"

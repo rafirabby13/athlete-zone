@@ -13,9 +13,9 @@ const Root = () => {
 
   return (
     <div id={theme}>
-      {/* <section>
+       <section>
         <Navbar />
-      </section> */}
+      </section>
      
       <Outlet />
       <section>

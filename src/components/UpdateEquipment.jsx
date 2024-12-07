@@ -58,13 +58,13 @@ const UpdateEquipment = () => {
   };
   return (
     <div className="py-10">
-      <h1 className="w-3/4 mx-auto text-4xl font-bold p-4 shadow-purple-600 shadow-md text-center mb-2">
+      <h1 className="md:w-3/4 mx-auto text-xl md:text-4xl font-bold p-4 shadow-purple-600 shadow-md text-center mb-2">
         Update Equipment
       </h1>
       <div className="min-h-screen">
         <div className="card bg-base-100 w-full  shrink-0 shadow-2xl rounded-none">
           <form
-            className="card-bod grid grid-cols-2 gap-4 p-16"
+            className="card-bod md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:p-16"
             onSubmit={handleAddEquipment}
           >
             <div className="form-control ">
@@ -200,8 +200,8 @@ const UpdateEquipment = () => {
               />
             </div>
 
-            <div className="form-control mt-6 col-span-2">
-              <button className="btn bg-purple-600 text-white font-medium text-xl w-1/2 mx-auto">
+            <div className="form-control my-6 lg:col-span-1 lg:col-start-2 md:col-start-1 w-fit mx-auto">
+              <button className="btn bg-purple-600 text-white text-xl font-medium">
                 Update Equipment
               </button>
             </div>

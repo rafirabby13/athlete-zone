@@ -49,12 +49,12 @@ const Login = () => {
   }
 
   return (
-    <div className="her bg-base-200 min-h-screen">
+    <div className="her my-10 md:my-0  min-h-screen">
       <div className="hero-conten flex-col ">
-        <div className="text-center py-10">
-          <h1 className="text-5xl font-bold">Login now!</h1>
+        <div className="text-center py-4 md:py-10">
+          <h1 className="text-2xl underline md:text-5xl font-bold">Login now!</h1>
         </div>
-        <div className="card bg-base-100 w-full max-w-xl mx-auto py-10  shrink-0 shadow-2xl">
+        <div className="card bg-base-100 w-full max-w-xl mx-auto md:py-10  shrink-0 shadow-2xl">
           <form className="card-body" onSubmit={handleSubmit}>
             <div className="form-control">
               <label className="label">
@@ -81,19 +81,19 @@ const Login = () => {
                 required
               />
             </div>
-            <p className="text-2xl">
+            <p className="md:text-2xl">
               Don't have an account?{" "}
               <Link className="underline font-semibold" to="/register">
                 Register
               </Link>
             </p>
-            <div className="form-control mt-6">
+            <div className="form-control md:mt-6">
               <button className="btn btn-primary">Login</button>
             </div>
           </form>
-          <div className="divider divider-info w-3/4 mx-auto pb-5">OR</div>
+          <div className="divider divider-info w-3/4 mx-auto md:pb-5">OR</div>
           <div className="text-center w-full">
-            <button className="border-2 w-3/4 p-4  text-2xl font-semibold rounded-lg  shadow-red-400 shadow-md" onClick={handleGoogleLogin}>Sign In With Google</button>
+            <button className="border-2 w-3/4 p-4  md:text-2xl mb-7 md:mb-0 font-semibold rounded-lg  shadow-red-400 shadow-md" onClick={handleGoogleLogin}>Sign In With Google</button>
           </div>
         </div>
       </div>

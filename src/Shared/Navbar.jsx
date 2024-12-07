@@ -82,10 +82,10 @@ const Navbar = () => {
   };
 
   return (
-    <div className="py-1 lg:py-7 nav">
-      <div className="navbar  lg:px-28">
+    <div className="py-1 lg:py-7 nav ">
+      <div className="navbar lg:px-4 xl:px-28">
         <div className="navbar-start ">
-          <div className="dropdown">
+          <div className="dropdown ">
             <div tabIndex={0} role="button" className=" lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +104,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow"
             >
               {items}
             </ul>
@@ -154,7 +154,7 @@ const Navbar = () => {
         <div
           data-tooltip-id="toggle"
           onClick={handleTheme}
-          className="text-3xl lg:text-7xl pl-3 lg:ml-5 font-normal "
+          className="text-3xl lg:text-7xl pl-3 xl:ml-5 font-normal "
         >
           {theme == "light" ? <FaToggleOff /> : <FaToggleOn />}
         </div>

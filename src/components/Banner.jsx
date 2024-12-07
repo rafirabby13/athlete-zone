@@ -20,7 +20,7 @@ import Lottie from "lottie-react";
 
 const Banner = () => {
   return (
-    <div>
+    <div className="z-10">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

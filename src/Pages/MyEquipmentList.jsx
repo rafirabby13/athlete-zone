@@ -60,7 +60,7 @@ const MyEquipmentList = () => {
   };
   // console.log(data);
   return (
-    <div className="grid grid-cols-3 gap-3 z-0 min-h-screen py-10">
+    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 z-0 min-h-screen py-10">
       {data?.map((myEquipments) => (
         <MyEquipmentListCard
           key={myEquipments._id}
