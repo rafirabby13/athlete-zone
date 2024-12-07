@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
@@ -10,7 +10,10 @@ const Register = () => {
 
 const {registerUser, setUser, updateUserProfile, googleLogin} = useContext(AuthContext)
 
+const location = useLocation()
+  // console.log(location);
 
+  const navigate = useNavigate()
 
     const handleSubmit=(e)=>{
         e.preventDefault()
@@ -33,6 +36,7 @@ const {registerUser, setUser, updateUserProfile, googleLogin} = useContext(AuthC
                   .then(()=>{
                       toast.success('Registered Successfully')
                       form.reset()
+                      navigate(location?.state ? location.state : '/')
                   })
                   .catch(err=>{
                       console.log(err.message);
@@ -74,6 +78,7 @@ const {registerUser, setUser, updateUserProfile, googleLogin} = useContext(AuthC
             console.log(res.user);
             toast.success('Registered Successfully')
             setUser(res.user)
+            navigate(location?.state ? location.state : '/')
         })
         .catch(err=>{
             console.log(err.message);
