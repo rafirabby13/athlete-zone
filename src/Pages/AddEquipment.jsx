@@ -59,7 +59,7 @@ const navigate = useNavigate()
   };
 
   return (
-    <div className="py-10 ">
+    <div className="py-10 lg:px-20">
       <Helmet>
            <title>Add Equipment | AthleteZone</title>
       </Helmet>
@@ -77,6 +77,7 @@ const navigate = useNavigate()
                 <span className="label-text text-xl ">Image</span>
               </label>
               <input
+              required
                 type="text"
                 placeholder="Image URL"
                 className="input input-bordered"
@@ -88,6 +89,7 @@ const navigate = useNavigate()
                 <span className="label-text text-xl">Item Name</span>
               </label>
               <input
+              required
                 type="text"
                 placeholder="Item Name"
                 className="input input-bordered"
@@ -99,6 +101,7 @@ const navigate = useNavigate()
                 <span className="label-text text-xl">Category Name</span>
               </label>
               <input
+              required
                 type="text"
                 placeholder="Category Name"
                 className="input input-bordered"
@@ -110,6 +113,7 @@ const navigate = useNavigate()
                 <span className="label-text text-xl">Description</span>
               </label>
               <input
+              required
                 type="text"
                 placeholder="Description"
                 className="input input-bordered"
@@ -121,6 +125,7 @@ const navigate = useNavigate()
                 <span className="label-text text-xl">Price</span>
               </label>
               <input
+              required
                 type="text"
                 placeholder="Price"
                 className="input input-bordered"
@@ -132,6 +137,7 @@ const navigate = useNavigate()
                 <span className="label-text text-xl">Rating</span>
               </label>
               <input
+              required
                 type="text"
                 placeholder="Rating Out Of 5"
                 className="input input-bordered"
@@ -144,6 +150,7 @@ const navigate = useNavigate()
                 <span className="label-text text-xl">Customization </span>
               </label>
               <input
+              required
                 type="text"
                 placeholder="Customization "
                 className="input input-bordered"
@@ -157,6 +164,7 @@ const navigate = useNavigate()
                 </span>
               </label>
               <input
+              required
                 type="text"
                 placeholder="Processing Time (delivery time) "
                 className="input input-bordered"
@@ -170,6 +178,7 @@ const navigate = useNavigate()
                 </span>
               </label>
               <input
+              required
                 type="text"
                 placeholder="Available product quantity "
                 className="input input-bordered"
@@ -182,6 +191,7 @@ const navigate = useNavigate()
                 <span className="label-text text-xl">User Email</span>
               </label>
               <input
+              required
                 type="text"
                 value={user?.email}
                 className="input input-bordered"
@@ -193,6 +203,7 @@ const navigate = useNavigate()
                 <span className="label-text text-xl">User Name</span>
               </label>
               <input
+              required
                 type="text"
                 value={user?.displayName}
                 className="input input-bordered"

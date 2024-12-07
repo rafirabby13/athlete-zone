@@ -64,7 +64,7 @@ const MyEquipmentListCard = ({ myEquipments, handleDelete }) => {
           </div>
 
           <div className="mt-3 flex items-center justify-between">
-            <div className="flex items-center space-x-1 text-yellow-400">
+            <div className="flex items-center space-x-1 text-orange-700 text-lg">
               <FaStar />
               <span className="font-medium">{rating}/5</span>
             </div>

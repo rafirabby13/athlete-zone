@@ -1,8 +1,12 @@
-# React + Vite
+# Website Name: AthleteZone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Live Site: https://athlete-zone-f7a74.web.app/
 
-Currently, two official plugins are available:
+# Features 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Only Authenticated User can Add and Update equipment data.
+2. User can see All the data and can also view any specific product detail.
+3. Two routes are private. Only logged In user can see data.
+4. User can see his.her added data list after login. User can also delete added data only by clicking delete button. A confirmation pop up will ask for delete.
+5. Dark/Light theme toggle functionality also added at the navbar.  
+

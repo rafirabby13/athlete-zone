@@ -19,7 +19,7 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive ? "bg-fuchsia-700 font-bold text-white text-xl" : "font-bold"
+            isActive ? "bg-fuchsia-700 font-bold text-white lg:text-lg" : "font-bold"
           }
           to="/"
         >
@@ -29,7 +29,7 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive ? "bg-fuchsia-700 font-bold text-white text-xl" : "font-bold"
+            isActive ? "bg-fuchsia-700 font-bold text-white lg:text-lg" : "font-bold"
           }
           to="/allSports"
         >
@@ -39,7 +39,7 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive ? "bg-fuchsia-700 font-bold text-white text-xl" : "font-bold"
+            isActive ? "bg-fuchsia-700 font-bold text-white lg:text-lg" : "font-bold"
           }
           to="/addEquipment"
         >
@@ -49,7 +49,7 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive ? "bg-fuchsia-700 font-bold text-white text-xl" : "font-bold"
+            isActive ? "bg-fuchsia-700 font-bold text-white lg:text-lg" : "font-bold"
           }
           to={`/myEquipment`}
         >

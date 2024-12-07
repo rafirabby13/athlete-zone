@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Helmet } from "react-helmet";
 
 const UpdateEquipment = () => {
   const { user } = useContext(AuthContext);
-
+const navigate = useNavigate()
   const data = useLoaderData();
   // console.log(data);
   const handleAddEquipment = (e) => {
@@ -51,6 +51,7 @@ const UpdateEquipment = () => {
         console.log(res);
         if (res.modifiedCount > 0) {
           toast.success("Updated Successfully");
+          navigate('/')
         }
       })
       .catch((err) => {

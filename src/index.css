@@ -103,3 +103,8 @@ body {
 #dark .drop{
   background-color: black;
 }
+
+#dark .tableHeader{
+  background-color: black;
+color: wheat;
+}
