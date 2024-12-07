@@ -10,9 +10,13 @@ import Navbar from "../Shared/Navbar.jsx";
 
 import "react-toastify/dist/ReactToastify.css";
 import Products from "../components/Products.jsx";
+import { Helmet } from "react-helmet";
 const Home = () => {
   return (
     <div className="space-y-10 lg:max-w-[85%] mx-auto pb-20">
+      <Helmet>
+           <title>Home | AthleteZone</title>
+      </Helmet>
          <section>
         <Banner />
       </section>

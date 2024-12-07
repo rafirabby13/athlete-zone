@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 const Login = () => {
   const { setUser, loginUser , googleLogin} = useContext(AuthContext);
 
@@ -50,6 +51,9 @@ const Login = () => {
 
   return (
     <div className="her my-10 md:my-0  min-h-screen">
+       <Helmet>
+           <title>Login | AthleteZone</title>
+      </Helmet>
       <div className="hero-conten flex-col ">
         <div className="text-center py-4 md:py-10">
           <h1 className="text-2xl underline md:text-5xl font-bold">Login now!</h1>

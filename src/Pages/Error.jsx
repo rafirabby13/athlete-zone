@@ -2,9 +2,13 @@
 import Lottie from "lottie-react";
 import { Link } from "react-router-dom";
 import errr from '../../public/404.json'
+import { Helmet } from "react-helmet";
 const Error = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-6">
+      <Helmet>
+           <title>Error | AthleteZone</title>
+      </Helmet>
       <div className="text-center">
         <p className="w-full">
         <Lottie className="h-48" animationData={errr} loop={true} />

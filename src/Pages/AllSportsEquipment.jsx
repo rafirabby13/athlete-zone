@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
+import { Helmet } from "react-helmet";
 
 const AllSportsEquipment = () => {
   // const loadedData = useLoaderData();
@@ -54,6 +55,9 @@ const AllSportsEquipment = () => {
 
   return (
     <div>
+       <Helmet>
+           <title>All Sports | AthleteZone</title>
+      </Helmet>
       {
       dataLoading ? 'loading'
       :

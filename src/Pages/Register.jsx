@@ -4,6 +4,7 @@ import { AuthContext } from "../Providers/AuthProvider.jsx";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
 
@@ -81,8 +82,11 @@ const {registerUser, setUser, updateUserProfile, googleLogin} = useContext(AuthC
 
 
   return (
-    <div className="her my-10   min-h-screen">
-      <div className="hero-conten flex-col ">
+    <div className="her my-10    min-h-screen">
+       <Helmet>
+           <title>Register | AthleteZone</title>
+      </Helmet>
+      <div className="hero-conten flex-col  ">
         <div className="text-center  md:py-10">
           <h1 className="text-2xl md:text-5xl font-bold">Register now!</h1>
         
@@ -145,7 +149,7 @@ const {registerUser, setUser, updateUserProfile, googleLogin} = useContext(AuthC
           </form>
           <div className="divider divider-info w-3/4 mx-auto md:pb-5">OR</div>
           <div className="text-center w-full">
-            <button className="border-2 w-3/4 p-2 md:p-4  md:text-2xl font-semibold rounded-lg  shadow-red-400 shadow-md" onClick={handleGoogleLogin}>Sign Up With Google</button>
+            <button className="border-2 w-3/4 p-2 md:p-4 mb-10  md:text-2xl font-semibold rounded-lg  shadow-red-400 shadow-md" onClick={handleGoogleLogin}>Sign Up With Google</button>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
 import { useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 const UpdateEquipment = () => {
   const { user } = useContext(AuthContext);
@@ -58,6 +59,9 @@ const UpdateEquipment = () => {
   };
   return (
     <div className="py-10">
+       <Helmet>
+           <title>Update Equipment | AthleteZone</title>
+      </Helmet>
       <h1 className="md:w-3/4 mx-auto text-xl md:text-4xl font-bold p-4 shadow-purple-600 shadow-md text-center mb-2">
         Update Equipment
       </h1>

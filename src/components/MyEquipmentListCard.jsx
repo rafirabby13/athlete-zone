@@ -7,6 +7,7 @@ import { RiDeleteBin6Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
+import { Helmet } from "react-helmet";
 // import 'sweetalert2/src/sweetalert2.scss'
 
 const MyEquipmentListCard = ({ myEquipments, handleDelete }) => {
@@ -31,6 +32,9 @@ const MyEquipmentListCard = ({ myEquipments, handleDelete }) => {
 
   return (
     <div>
+      <Helmet>
+           <title>My Equipment | AthleteZone</title>
+      </Helmet>
       <div className="relative bg-white myEquipment shadow-md rounded-lg overflow-hidden hover:shadow-lg hover:ring-2 hover:ring-indigo-500 transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between h-full">
         <div className="absolute top-3 left-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold px-4 py-1 rounded-full shadow-lg">
           {category}
