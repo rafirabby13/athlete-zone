@@ -29,7 +29,7 @@ body {
 }
 
 #light .nav {
-  background-color: #ecdfcc;
+  background-color: #FFFBEB;
 }
 #dark .nav {
   background-color: #432e54;
@@ -107,4 +107,12 @@ body {
 #dark .tableHeader{
   background-color: black;
 color: wheat;
+}
+
+.foo{
+  background-image: url('/bg.jpg');
+  background: linear-gradient(0deg,rgba(0, 0, 0, 0.917), rgba(0, 0, 0, 0.088)), url('/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
 }

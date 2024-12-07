@@ -22,7 +22,7 @@ const Product = ({ product }) => {
       <p className="text-sm  mt-2">Category: {category}</p>
       <p className=" mt-2 text-sm">{description}</p>
       <div className="flex items-center justify-between mt-4">
-        <span className="text-xl font-semibold text-blue-600">${price}</span>
+        <span className="text-xl font-semibold text-[#439A97]">${price}</span>
         <div className="flex items-center">
           {[...Array(5)].map((_, i) => (
             <svg
@@ -44,13 +44,13 @@ const Product = ({ product }) => {
       <p
         className={`mt-3 text-sm font-semibold ${
           stock === "Available"
-            ? "text-green-500"
-            : "text-red-500"
+            ? "text-[#439A97]"
+            : "text-[#439A97]"
         }`}
       >
         Available stock : {stock}
       </p>
-      <button className="w-full mt-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:from-purple-500 hover:to-blue-500 transition">
+      <button className="w-full mt-4 py-2 bg-gradient-to-br from-[#439A97] to-[#490467] text-white rounded-lg hover:from-purple-500 hover:to-[#7b0eaa81] transition">
         <Link to={`/allSports/${_id}`}>View Details</Link>
       </button>
     </div>

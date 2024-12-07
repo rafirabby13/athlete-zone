@@ -92,12 +92,12 @@ const Login = () => {
               </Link>
             </p>
             <div className="form-control md:mt-6">
-              <button className="btn btn-primary">Login</button>
+              <button className="btn text-white bg-[#439A97]">Login</button>
             </div>
           </form>
           <div className="divider divider-info w-3/4 mx-auto md:pb-5">OR</div>
           <div className="text-center w-full">
-            <button className="border-2 w-3/4 p-4  md:text-2xl mb-7 md:mb-0 font-semibold rounded-lg  shadow-red-400 shadow-md" onClick={handleGoogleLogin}>Sign In With Google</button>
+            <button className="border-2 w-3/4 p-4  md:text-2xl mb-7 md:mb-0 font-semibold rounded-lg bg-[#439A97] text-white shadow-red-400 shadow-sm" onClick={handleGoogleLogin}>Sign In With Google</button>
           </div>
         </div>
       </div>

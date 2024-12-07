@@ -47,7 +47,7 @@ const Products = () => {
                 damping={0.1}
                 key={i}
               >
-                {" "}
+                
                 <Product product={product}></Product>
               </Fade>
             ))}

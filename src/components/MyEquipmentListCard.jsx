@@ -35,7 +35,7 @@ const MyEquipmentListCard = ({ myEquipments, handleDelete }) => {
       <Helmet>
            <title>My Equipment | AthleteZone</title>
       </Helmet>
-      <div className="relative bg-white myEquipment shadow-md rounded-lg overflow-hidden hover:shadow-lg hover:ring-2 hover:ring-indigo-500 transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between h-full">
+      <div className="relative bg-white myEquipment shadow-md rounded-lg overflow-hidden hover:shadow-lg hover:ring-2 hover:ring-[#439A97] transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between h-full">
         <div className="absolute top-3 left-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold px-4 py-1 rounded-full shadow-lg">
           {category}
         </div>
@@ -60,7 +60,7 @@ const MyEquipmentListCard = ({ myEquipments, handleDelete }) => {
 
           {/* Price, Stock, and Customization */}
           <div className="mt-4 flex justify-between items-center">
-            <p className="text-2xl font-bold text-indigo-600">${price}</p>
+            <p className="text-2xl font-bold text-[#439A97]">${price}</p>
           </div>
 
           <div className="mt-3 flex items-center justify-between">
@@ -73,13 +73,13 @@ const MyEquipmentListCard = ({ myEquipments, handleDelete }) => {
           <div className="mt-5 flex justify-between items-center space-x-1 md:space-x-3">
             <Link
               to={`/updateEquipment/${_id}`}
-              className="w-full bg-indigo-600 text-white md:text-sm py-1 md:py-2 px-1 md:px-4 rounded-md shadow-md hover:bg-indigo-700 text-xs transition-transform duration-200 transform hover:scale-105 flex items-center justify-center"
+              className="w-full bg-[#439A97] text-white md:text-sm py-1 md:py-2 px-1 md:px-4 rounded-md shadow-md hover:bg-[#028d88] text-xs transition-transform duration-200 transform hover:scale-105 flex items-center justify-center"
             >
               <FaEdit className="inline-block mr-2" /> Edit
             </Link>
             <button
               onClick={() => handleDelete(_id)}
-              className="w-full bg-indigo-600 text-white md:text-sm py-1 md:py-2 px-1 md:px-4 rounded-md shadow-md hover:bg-indigo-700 text-xs transition-transform duration-200 transform hover:scale-105 flex items-center justify-center"
+              className="w-full bg-[#439A97] text-white md:text-sm py-1 md:py-2 px-1 md:px-4 rounded-md shadow-md hover:bg-[#028d88] text-xs transition-transform duration-200 transform hover:scale-105 flex items-center justify-center"
             >
               <RiDeleteBin6Fill className="inline-block mr-2" /> Delete
             </button>

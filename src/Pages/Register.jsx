@@ -144,12 +144,12 @@ const {registerUser, setUser, updateUserProfile, googleLogin} = useContext(AuthC
             </div>
             <p className="md:text-2xl">Already have an account? <Link className="underline font-semibold" to='/login'>Login</Link></p>
             <div className="form-control md:mt-6">
-              <button className="btn btn-primary">Register</button>
+              <button className="btn  bg-[#439A97] text-white">Register</button>
             </div>
           </form>
           <div className="divider divider-info w-3/4 mx-auto md:pb-5">OR</div>
           <div className="text-center w-full">
-            <button className="border-2 w-3/4 p-2 md:p-4 mb-10  md:text-2xl font-semibold rounded-lg  shadow-red-400 shadow-md" onClick={handleGoogleLogin}>Sign Up With Google</button>
+            <button className="border-2 w-3/4 p-2 md:p-4 mb-10  md:text-2xl font-semibold rounded-lg bg-[#439A97] shadow-red-400 shadow-sm text-white" onClick={handleGoogleLogin}>Sign Up With Google</button>
           </div>
         </div>
       </div>

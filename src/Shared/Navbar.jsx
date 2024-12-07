@@ -11,15 +11,20 @@ import { IoToggle } from "react-icons/io5";
 import { FaToggleOff, FaToggleOn } from "react-icons/fa";
 import Lottie from "lottie-react";
 import { keyframes } from "@emotion/react";
+import { PiToggleLeftFill } from "react-icons/pi";
 const Navbar = () => {
-  const [hide, setHide] = useState(true)
+  const [hide, setHide] = useState(true);
+  const [showTooltip, setShowTooltip] = useState(true);
+
   const { user, logoutUser, theme, setTheme } = useContext(AuthContext);
   const items = (
     <>
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive ? "bg-fuchsia-700 font-bold text-white lg:text-lg" : "font-bold"
+            isActive
+              ? "bg-[#439A97] font-bold text-white lg:text-lg"
+              : "font-bold"
           }
           to="/"
         >
@@ -29,7 +34,9 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive ? "bg-fuchsia-700 font-bold text-white lg:text-lg" : "font-bold"
+            isActive
+              ? "bg-[#439A97] font-bold text-white lg:text-lg"
+              : "font-bold"
           }
           to="/allSports"
         >
@@ -39,7 +46,9 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive ? "bg-fuchsia-700 font-bold text-white lg:text-lg" : "font-bold"
+            isActive
+              ? "bg-[#439A97] font-bold text-white lg:text-lg"
+              : "font-bold"
           }
           to="/addEquipment"
         >
@@ -49,7 +58,9 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive ? "bg-fuchsia-700 font-bold text-white lg:text-lg" : "font-bold"
+            isActive
+              ? "bg-[#439A97] font-bold text-white lg:text-lg"
+              : "font-bold"
           }
           to={`/myEquipment`}
         >
@@ -82,14 +93,17 @@ const Navbar = () => {
     console.log(theme);
   };
 
-  
-
   return (
     <div className="py-1 lg:py-7 nav ">
       <div className="navbar lg:px-4 xl:px-28">
         <div className="navbar-start ">
-          <div  className="dropdown ">
-            <div onClick={()=> setHide(false)} tabIndex={0} role="button" className=" lg:hidden">
+          <div className="dropdown ">
+            <div
+              onClick={() => setHide(false)}
+              tabIndex={0}
+              role="button"
+              className=" lg:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-8 w-8"
@@ -105,81 +119,93 @@ const Navbar = () => {
                 />
               </svg>
             </div>
-            <ul onClick={()=> setHide(true)}
+            <ul
+              onClick={() => setHide(true)}
               tabIndex={0}
-              className={`menu menu-sm dropdown-content bg-base-100 space-y-3 rounded-box z-50 mt-3 drop w-52 p-4 shadow ${hide ? 'hidden' : ''}`}
+              className={`menu menu-sm dropdown-content bg-base-100 space-y-3 rounded-box z-50 mt-3 drop w-52 p-4 shadow ${
+                hide ? "hidden" : ""
+              }`}
             >
-              {
-                
-                items
-              }
+              {items}
             </ul>
           </div>
-          <Fade className="hidden md:flex"  direction="up" duration={400} onVisibilityChange={true} damping={0.1}>
+          <Fade
+            className="hidden md:flex"
+            direction="up"
+            duration={400}
+            onVisibilityChange={true}
+            damping={0.1}
+          >
             <Link to="/" className="text-3xl font-bold">
               AthleteZone
             </Link>
           </Fade>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{items}</ul>
+          <ul className="menu menu-horizontal items-center px-1">{items}</ul>
         </div>
-        <div className="navbar-end">
-          {user ? (
-            <div className="flex items-center gap-4">
-              <img
-                data-tooltip-id="my-tooltip"
-                className="h-12 lg:h-16 lg:w-16 rounded-3xl"
-                src={user?.photoURL}
-                alt=""
-              />
-              <Tooltip
-                variant="success"
-                style={{
-                  background: "purple",
-                  color: "white",
-                  fontSize: "16px",
-                }}
-                id="my-tooltip"
-                className="z-50 bg-green-600 text-white"
+      
+          <div className="navbar-end ">
+            {user ? (
+              <div className="flex items-center gap-1  md:gap-4">
+                <img
+                  data-tooltip-id="my-tooltip"
+                  className="h-12 lg:h-16 lg:w-16 rounded-3xl"
+                  src={user?.photoURL}
+                  alt=""
+                />
+                <Tooltip
+                  variant="success"
+                  id="my-tooltip"
+                  className="z-50 bg-[#439A97] text-[#000B58]"
+                >
+                  <div>
+                    <h3>{user?.displayName}</h3>
+                  </div>
+                </Tooltip>
+                <Link
+                  onClick={handleLogout}
+                  className="btn bg-[#62B6B7] text-white  text-sm border-none"
+                >
+                  Logout
+                </Link>
+              </div>
+            ) : (
+              <Link
+                className="btn bg-[#62B6B7] border-none  text-white"
+                to="/login"
               >
-                <div>
-                  <h3>{user?.displayName}</h3>
-                </div>
-              </Tooltip>
-              <Link  onClick={handleLogout} className="btn p-2 text-sm">
-                Logout
+                Login
               </Link>
-            </div>
-          ) : (
-            <Link className="btn p-2" to="/login">
-              Login
-            </Link>
-          )}
-        </div>
-        <div
-          data-tooltip-id="toggle"
-          onClick={handleTheme}
-          className="text-3xl lg:text-7xl pl-3 xl:ml-5 font-normal "
-        >
-          {theme == "light" ? <FaToggleOff /> : <FaToggleOn />}
-        </div>
-        <div>
+            )}
+            
+          </div>
+          <div
+            data-tooltip-id="togglee"
+            onClick={handleTheme}
+            className="text-3xl bg-[#62B6B7] p-2 lg:py-1 lg:text-5xl ml-2 xl:ml-5 font-normal  rounded-xl border-none "
+          >
+            {theme == "light" ? <PiToggleLeftFill /> : <FaToggleOn />}
+          </div>
+      
+        {/* <div>
           <Tooltip
             variant="success"
+            place="bottom"
+            delayHide={1}
             style={{
               background: "blue",
               color: "white",
               fontSize: "16px",
             }}
             id="toggle"
-            className="z-50 bg-green-600 text-white"
+            className="z-50 bg-[#439A97] text-white"
           >
             <div>
               <h3>{theme == "light" ? "Light" : "Dark"}</h3>
             </div>
           </Tooltip>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -2,6 +2,7 @@
 import { useContext, useEffect, useState } from "react";
 import SportsCategoryCard from "./SportsCategoryCard.jsx";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
+import { Fade } from "react-awesome-reveal";
 
 
 const SportsCategories = () => {
@@ -40,10 +41,19 @@ const SportsCategories = () => {
             "
           >
             {categories.map((category, i) => (
+              <Fade
+              cascade
+              delay={i * 200}
+              direction="right"
+              triggerOnce={true}
+              damping={0.4}
+              key={i}
+            >
               <SportsCategoryCard
                 key={i}
                 category={category}
               ></SportsCategoryCard>
+              </Fade>
             ))}
           </div>
         </div>

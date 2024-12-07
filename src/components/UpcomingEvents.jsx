@@ -2,6 +2,7 @@
 import { useContext, useEffect, useState } from "react";
 import EventCard from "./EventCard.jsx";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
+import { Fade } from "react-awesome-reveal";
 
 const UpcomingEvents = () => {
   const [events, setEvents] = useState([]);
@@ -37,7 +38,16 @@ const UpcomingEvents = () => {
           </div>
           <div>
             {events.map((event, index) => (
+               <Fade
+               cascade
+               delay={index * 200}
+               direction="up"
+               triggerOnce={true}
+               damping={0.4}
+               key={index}
+             >
               <EventCard key={index} event={event}></EventCard>
+              </Fade>
             ))}
           </div>
         </div>

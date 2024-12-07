@@ -67,7 +67,7 @@ const navigate = useNavigate()
         Add Equipment
       </h1>
       <div className="min-h-screen ">
-        <div className="card bg-base-100 addEquipment w-full  shrink-0 shadow-2xl rounded-none">
+        <div className="card bg-base-100 addEquipment w-full p-2  shrink-0 shadow-2xl rounded-none">
           <form
             className="card-bod md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:p-16"
             onSubmit={handleAddEquipment}
@@ -212,7 +212,7 @@ const navigate = useNavigate()
             </div>
 
             <div className="form-control my-6 lg:col-span-1 lg:col-start-2 md:col-start-1 w-fit mx-auto">
-              <button className="btn bg-purple-600 text-white text-xl font-medium">Add Equipment</button>
+              <button className="btn bg-[#439A97] text-white text-xl font-medium">Add Equipment</button>
             </div>
           </form>
         </div>

@@ -10,16 +10,16 @@ import {
 
 const Footer = () => {
   return (
-    <div>
-      <footer className="foote bg-base-200 text-base-content py-5 md:py-10">
+    <div className="foo">
+      <footer className="foote  text-[#ffffffc2] py-5 md:py-10">
         
           <div className="text-center py-6 md:py-20 md:animate__animated animate__slideInDown animate__slower animate__infinite">
           
-            <h1 className="font-extrabold text-2xl md:text-7xl drop-shadow-xl">AthleteZone</h1>
+            <h1 className="font-extrabold text-2xl md:text-7xl drop-shadow-xl text-[#fffffff5]">AthleteZone</h1>
            
           </div>
         
-        <div className=" flex md:flex-row gap-5 flex-col items-start justify-between px-4 md:px-20">
+        <div className=" flex md:flex-row gap-5 flex-col items-start text-[#ffffffc2] justify-between px-4 md:px-20">
           <div className="flex flex-col gap-2 text-sm md:text-xl">
             <h6 className="footer-title">Products</h6>
             <a className="link link-hover">Sports Gear</a>
@@ -43,15 +43,15 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <footer className="foote bg-base-200 text-base-content border-base-300 border-t px-4 md:px-20  text-xl flex md:flex-row flex-col gap-5 items-center justify-between py-10">
-        <aside className="grid-flow-col items-center text-sm text-center md:text-start">
+      <footer className="foote    px-4 md:px-20  text-xl flex md:flex-row flex-col gap-5 items-center justify-between text-[#ffffffc2] py-10">
+        <aside className="grid-flow-col items-center text-[#ffffffc2] text-sm text-center md:text-start">
           <p>
             @copyright AthleteZone Online Store. All Rights Reserved.
             <br />
             Your trusted partner in sports since 2020
           </p>
         </aside>
-        <nav className="md:place-self-center md:justify-self-end">
+        <nav className="md:place-self-center md:justify-self-end text-[#ffffffc2]">
           <div className="grid grid-flow-col gap-4">
             <div className="text-xl md:text-5xl">
               <FaFacebook />
