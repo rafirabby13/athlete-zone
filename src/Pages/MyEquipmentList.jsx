@@ -6,17 +6,20 @@ import { AuthContext } from "../Providers/AuthProvider.jsx";
 import Swal from "sweetalert2";
 
 const MyEquipmentList = () => {
-  const { user } = useContext(AuthContext);
+  const { user, dataLoading, setDataLoading } = useContext(AuthContext);
   const [data, setData] = useState([]);
 
   useEffect(() => {
+    setDataLoading(true);
+
     fetch(`https://athlete-zone-server.vercel.app/equip/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
+        setDataLoading(false);
         setData(data);
       });
-  }, [user]);
+  }, [user, setDataLoading]);
 
   const handleDelete = (id) => {
     // console.log(id);
@@ -58,9 +61,18 @@ const MyEquipmentList = () => {
   // console.log(data);
   return (
     <div>
-      {data.length == 0 ? (
+      {dataLoading ? (
+        <div className="flex justify-center">
+          <span className="loading loading-bars loading-lg mx-auto"></span>
+        </div>
+      ) : data.length == 0 ? (
         <div className="min-h-screen ">
-          <h1 className="text-center p-5 w-fit mx-auto font-bold text-white text-4xl bg-[#439A97]">You Have not added any data. <Link to='/addEquipment' className="text-[#7b029a] underline">Add data</Link> </h1>
+          <h1 className="text-center p-5 w-fit mx-auto font-bold text-white text-4xl bg-[#439A97]">
+            You Have not added any data.{" "}
+            <Link to="/addEquipment" className="text-[#7b029a] underline">
+              Add data
+            </Link>{" "}
+          </h1>
         </div>
       ) : (
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 z-0 min-h-screen py-10 md:py-20 md:pb-44 lg:px-20">
