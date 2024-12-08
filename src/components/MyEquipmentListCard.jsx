@@ -45,7 +45,7 @@ const MyEquipmentListCard = ({ myEquipments, handleDelete }) => {
           <img
             src={photo}
             alt={name}
-            className="w-full h-28 md:h-56 object-cover transition-transform duration-300 hover:scale-105"
+            className="w-full h-28 md:h-56 xl:h-80  transition-transform duration-300 hover:scale-105"
           />
         </div>
 

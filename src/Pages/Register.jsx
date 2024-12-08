@@ -30,7 +30,7 @@ const location = useLocation()
             if (small.test(password)) {
               registerUser(email, password)
               .then(res=>{
-                  // console.log(res.user);
+                  console.log(res.user);
                   setUser(res.user)
                   updateUserProfile(name, photo)
                   .then(()=>{
@@ -39,11 +39,11 @@ const location = useLocation()
                       navigate(location?.state ? location.state : '/')
                   })
                   .catch(err=>{
-                      console.log(err.message);
+                      toast.error(err.message);
                   })
               })
               .catch(err=>{
-                  console.log(err.message);
+                  toast.error(err.message);
               })
             } else {
               Swal.fire({

@@ -6,8 +6,8 @@ import { ThreeCircles } from "react-loader-spinner";
 
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
-  const location = useLocation()
-  // console.log(location);
+  const location = useLocation();
+  // console.log("loading", loading);
   if (loading) {
     return (
       <div className="flex justify-center min-h-screen">
@@ -25,13 +25,10 @@ const PrivateRoute = ({ children }) => {
     );
   }
 
- 
-
-  if (user && user.email) {
+  if (user) {
     return children;
-  } else {
-    return <Navigate state={location.pathname} to="/login"></Navigate>;
   }
+  return <Navigate state={location.pathname} to="/login"></Navigate>;
 };
 
 export default PrivateRoute;

@@ -17,7 +17,7 @@ const Navbar = () => {
   const [showTooltip, setShowTooltip] = useState(true);
 
   const { user, logoutUser, theme, setTheme } = useContext(AuthContext);
-  console.log(user);
+  // console.log(user);
   const items = (
     <>
       <li>

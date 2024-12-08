@@ -3,6 +3,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import auth from "../Firebase/firebase.init.js";
+import { unstable_batchedUpdates } from "react-dom";
 export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
@@ -44,16 +45,22 @@ const AuthProvider = ({ children }) => {
   }
 
   useEffect(()=>{
+   
     const unsubscribe = onAuthStateChanged(auth, currentUser=>{
-        console.log(currentUser);
+      
+          console.log(currentUser);
         setUser(currentUser)
         setLoading(false)
+        console.log('auth', loading);
+        
+      
     })
 
     return ()=>{
+      
         unsubscribe()
     }
-  },[])
+  },[loading])
 
   const authInfo = {
     loading,
