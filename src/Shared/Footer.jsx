@@ -15,11 +15,11 @@ const Footer = () => {
         
           <div className="text-center py-6 md:py-20 md:animate__animated animate__slideInDown animate__slower animate__infinite">
           
-            <h1 className="font-extrabold shadow-xl text-2xl md:text-7xl w-fit mx-auto p-2 text-[#fffffff5]">AthleteZone</h1>
+            <h1 className="font-extrabold shadow-xl text-2xl md:text-7xl w-fit mx-auto p-2 text-[#ffffff]">AthleteZone</h1>
            
           </div>
         
-        <div className=" flex md:flex-row gap-5 flex-col items-start text-[#ffffffc2] justify-between px-4 md:px-20">
+        <div className=" flex md:flex-row gap-5 flex-col items-start text-[#ffffff] justify-between px-4 md:px-20">
           <div className="flex flex-col gap-2 text-sm md:text-xl">
             <h6 className="footer-title">Products</h6>
             <a className="link link-hover">Sports Gear</a>
@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <footer className="foote    px-4 md:px-20  text-xl flex md:flex-row flex-col gap-5 items-center justify-between text-[#ffffffc2] py-10">
+      <footer className="foote    px-4 md:px-20  text-xl flex md:flex-row flex-col gap-5 items-center justify-between text-[#ffffffe4] py-10">
         <aside className="grid-flow-col items-center text-[#ffffffc2] text-sm md:text-2xl text-center md:text-start ">
           <p>
             @copyright AthleteZone Online Store. All Rights Reserved.
