@@ -6,7 +6,7 @@ import { AuthContext } from "../Providers/AuthProvider.jsx";
 import Swal from "sweetalert2";
 
 const MyEquipmentList = () => {
-  const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext);
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -17,8 +17,6 @@ const MyEquipmentList = () => {
         setData(data);
       });
   }, [user]);
-
-
 
   const handleDelete = (id) => {
     console.log(id);
@@ -32,7 +30,6 @@ const MyEquipmentList = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-       
         fetch(`https://athlete-zone-server.vercel.app/equipment/${id}`, {
           method: "DELETE",
           headers: {
@@ -43,13 +40,13 @@ const MyEquipmentList = () => {
           .then((res) => {
             console.log(res);
             if (res.deletedCount > 0) {
-                const remaining = data.filter(dt=> dt._id != id)
-                setData(remaining)
-                Swal.fire({
-                    title: "Deleted!",
-                    text: "Your file has been deleted.",
-                    icon: "success",
-                  });
+              const remaining = data.filter((dt) => dt._id != id);
+              setData(remaining);
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success",
+              });
             }
           })
           .catch((err) => {
@@ -60,14 +57,22 @@ const MyEquipmentList = () => {
   };
   // console.log(data);
   return (
-    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 z-0 min-h-screen py-10 md:py-20 md:pb-44 lg:px-20">
-      {data?.map((myEquipments) => (
-        <MyEquipmentListCard
-          key={myEquipments._id}
-          myEquipments={myEquipments}
-          handleDelete={handleDelete}
-        ></MyEquipmentListCard>
-      ))}
+    <div>
+      {data.length == 0 ? (
+        <div className="min-h-screen ">
+          <h1 className="text-center bg-slate-400">You Have not added any data</h1>
+        </div>
+      ) : (
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 z-0 min-h-screen py-10 md:py-20 md:pb-44 lg:px-20">
+          {data?.map((myEquipments) => (
+            <MyEquipmentListCard
+              key={myEquipments._id}
+              myEquipments={myEquipments}
+              handleDelete={handleDelete}
+            ></MyEquipmentListCard>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

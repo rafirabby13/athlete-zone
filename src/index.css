@@ -87,18 +87,22 @@ body {
 }
 
 #dark .addEquipment {
-  background: #757b7b;
+  background: #181C14;
   color: rgba(255, 255, 255, 0.655);
 }
-
+#dark .allSports{
+  background: #181c14a6;
+  color: rgba(255, 255, 255, 0.655);
+}
 
 #dark .register{
   background-color: #000000;
 }
 
-#dark .label{
+/* #dark .label{
   background: #000000;
-}
+  color: white;
+} */
 
 #dark .drop{
   background-color: black;

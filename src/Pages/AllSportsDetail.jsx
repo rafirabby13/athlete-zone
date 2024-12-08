@@ -23,7 +23,7 @@ const AllSportsDetail = () => {
       <Helmet>
            <title>Detail | AthleteZone</title>
       </Helmet>
-      <div className="relative bg-gradient-to-br from-white to-gray-50 shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 max-w-xl transform hover:scale-125  mx-auto">
+      <div className="relative bg-gradient-to-br from-white to-gray-50 shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 max-w-xl transform hover:scale-125  mx-auto allSports ">
        
         <div className="absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white  font-bold px-3 py-3 rounded-xl text-lg shadow-md">
           {category}

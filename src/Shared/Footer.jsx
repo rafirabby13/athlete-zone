@@ -15,7 +15,7 @@ const Footer = () => {
         
           <div className="text-center py-6 md:py-20 md:animate__animated animate__slideInDown animate__slower animate__infinite">
           
-            <h1 className="font-extrabold text-2xl md:text-7xl drop-shadow-xl text-[#fffffff5]">AthleteZone</h1>
+            <h1 className="font-extrabold shadow-xl text-2xl md:text-7xl w-fit mx-auto p-2 text-[#fffffff5]">AthleteZone</h1>
            
           </div>
         
@@ -44,11 +44,13 @@ const Footer = () => {
         </div>
       </footer>
       <footer className="foote    px-4 md:px-20  text-xl flex md:flex-row flex-col gap-5 items-center justify-between text-[#ffffffc2] py-10">
-        <aside className="grid-flow-col items-center text-[#ffffffc2] text-sm text-center md:text-start">
+        <aside className="grid-flow-col items-center text-[#ffffffc2] text-sm md:text-2xl text-center md:text-start ">
           <p>
             @copyright AthleteZone Online Store. All Rights Reserved.
             <br />
             Your trusted partner in sports since 2020
+            <br />
+            <h1 className="underline">Contact us: <span className="font-bold">support@athletezone.com | +880-123-456-7890</span></h1>
           </p>
         </aside>
         <nav className="md:place-self-center md:justify-self-end text-[#ffffffc2]">

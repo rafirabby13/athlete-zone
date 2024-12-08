@@ -75,7 +75,7 @@ const MyEquipmentListCard = ({ myEquipments, handleDelete }) => {
               to={`/updateEquipment/${_id}`}
               className="w-full bg-[#439A97] text-white md:text-sm py-1 md:py-2 px-1 md:px-4 rounded-md shadow-md hover:bg-[#028d88] text-xs transition-transform duration-200 transform hover:scale-105 flex items-center justify-center"
             >
-              <FaEdit className="inline-block mr-2" /> Edit
+              <FaEdit className="inline-block mr-2" /> Update
             </Link>
             <button
               onClick={() => handleDelete(_id)}

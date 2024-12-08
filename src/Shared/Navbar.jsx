@@ -17,6 +17,7 @@ const Navbar = () => {
   const [showTooltip, setShowTooltip] = useState(true);
 
   const { user, logoutUser, theme, setTheme } = useContext(AuthContext);
+  console.log(user);
   const items = (
     <>
       <li>
@@ -144,50 +145,57 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal items-center px-1">{items}</ul>
         </div>
-      
-          <div className="navbar-end ">
-            {user ? (
-              <div className="flex items-center gap-1  md:gap-4">
-                <img
-                  data-tooltip-id="my-tooltip"
-                  className="h-12 lg:h-16 lg:w-16 rounded-3xl"
-                  src={user?.photoURL}
-                  alt=""
-                />
-                <Tooltip
-                  variant="success"
-                  id="my-tooltip"
-                  className="z-50 bg-[#439A97] text-[#000B58]"
-                >
-                  <div>
-                    <h3>{user?.displayName}</h3>
-                  </div>
-                </Tooltip>
-                <Link
-                  onClick={handleLogout}
-                  className="btn bg-[#62B6B7] text-white  text-sm border-none"
-                >
-                  Logout
-                </Link>
-              </div>
-            ) : (
+
+        <div className="navbar-end ">
+          {user ? (
+            <div className="flex items-center gap-1  md:gap-4">
+              <img
+                data-tooltip-id="my-tooltip"
+                className="h-12 w-12 lg:h-16 lg:w-16 rounded-full border-[5px] p-1 border-[#62B6B7]"
+                src={user?.photoURL}
+                alt={user?.displayName}
+              />
+              <Tooltip
+                variant="success"
+                id="my-tooltip"
+                className="z-50 bg-[#439A97] text-[#000B58]"
+              >
+                <div>
+                  <h3>{user?.displayName}</h3>
+                </div>
+              </Tooltip>
+              <Link
+                onClick={handleLogout}
+                className="btn bg-[#62B6B7] text-white  text-sm border-none"
+              >
+                Logout
+              </Link>
+            </div>
+          ) : (
+            <div className="flex gap-2">
               <Link
                 className="btn bg-[#62B6B7] border-none  text-white"
                 to="/login"
               >
                 Login
               </Link>
-            )}
-            
-          </div>
-          <div
-            data-tooltip-id="togglee"
-            onClick={handleTheme}
-            className="text-3xl bg-[#62B6B7] p-2 lg:py-1 lg:text-5xl ml-2 xl:ml-5 font-normal  rounded-xl border-none "
-          >
-            {theme == "light" ? <PiToggleLeftFill /> : <FaToggleOn />}
-          </div>
-      
+              <Link
+                className="btn bg-[#62B6B7] border-none  text-white"
+                to="/register"
+              >
+                Register
+              </Link>
+            </div>
+          )}
+        </div>
+        <div
+          data-tooltip-id="togglee"
+          onClick={handleTheme}
+          className="text-3xl bg-[#62B6B7] p-2 lg:py-1 lg:text-5xl ml-2 xl:ml-5 font-normal  rounded-xl border-none "
+        >
+          {theme == "light" ? <PiToggleLeftFill /> : <FaToggleOn />}
+        </div>
+
         {/* <div>
           <Tooltip
             variant="success"

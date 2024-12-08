@@ -79,7 +79,7 @@ const AllSportsEquipment = () => {
             </select>
           </div>
           <div className="overflow-x-auto md:px-20">
-            <table className="table table-zebra  border-2 text-center">
+            <table className="table  border-2 text-center">
               <thead className="tableHeader">
                 <tr className="text-xl">
                   <th className="hidden md:block"></th>

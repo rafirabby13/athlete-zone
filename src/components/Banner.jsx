@@ -25,7 +25,7 @@ const Banner = () => {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 4500,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -37,7 +37,7 @@ const Banner = () => {
       >
         <SwiperSlide>
           <div className="lg:px-20 flex py-2 md:py-0 md:flex-row flex-col-reverse items-center md:gap-10   bg-gradient-to-r from-[#D4F6FF] via-[#FBFBFB] to-[#FFCCE1] banner ">
-            <div className=" md:pl-12 md:w-2/5  space-y-4 ">
+            <div className=" p-2  md:w-2/5  space-y-4 ">
               <h1 className="text-2xl md:text-4xl font-bold">
                 Fresh Drops for Champions!
               </h1>
@@ -67,7 +67,7 @@ const Banner = () => {
               />
             </div>
             <div
-              className=" md:pr-12 md:w-2/5  
+              className="p-2 md:pr-12 md:w-2/5  
              space-y-4"
             >
               <h1 className="text-2xl md:text-4xl font-bold">
@@ -91,7 +91,7 @@ const Banner = () => {
                 loop={true}
               />
             </div>
-            <div className=" md:pr-12 md:w-2/5   space-y-4">
+            <div className="p-2 md:pr-12 md:w-2/5   space-y-4">
               <h1 className="text-2xl lg:text-4xl font-bold">
                 Top Picks for Every Athlete
               </h1>
@@ -106,7 +106,7 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="lg:px-20 flex py-2 md:py-0 md:flex-row flex-col-reverse items-center md:gap-10    bg-gradient-to-r from-[#CB9DF0] via-[#FFF] to-[#BFF6C3] banner">
-            <div className=" md:pl-12 md:w-2/5   space-y-4">
+            <div className="p-2  md:w-2/5   space-y-4">
               <h1 className="text-2xl lg:text-4xl font-bold">
                 Train Like a Pro!
               </h1>
@@ -136,7 +136,7 @@ const Banner = () => {
                 loop={true}
               />
             </div>
-            <div className=" md:pr-12 md:w-2/5   space-y-4">
+            <div className="p-2 md:pr-12 md:w-2/5   space-y-4">
               <h1 className="text-2xl md:text-4xl font-bold">
                 Season’s Biggest Sale!
               </h1>
