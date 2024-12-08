@@ -2,7 +2,7 @@
 import React from "react";
 
 const AllSportsEquipmentTable = ({ equipment }) => {
-  console.log(equipment);
+  // console.log(equipment);
   return (
     <div>
       <div className="overflow-x-auto w-full ">

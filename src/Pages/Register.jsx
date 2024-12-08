@@ -22,7 +22,7 @@ const location = useLocation()
         const email = form.email.value;
         const photo = form.photo.value;
         const password = form.password.value;
-        console.log(name, email, password, photo);
+        // console.log(name, email, password, photo);
         const  capital = /(?=.*[A-Z])/;
         const  small = /(?=.*[a-z])/;
         if (password.length > 5) {
@@ -30,7 +30,7 @@ const location = useLocation()
             if (small.test(password)) {
               registerUser(email, password)
               .then(res=>{
-                  console.log(res.user);
+                  // console.log(res.user);
                   setUser(res.user)
                   updateUserProfile(name, photo)
                   .then(()=>{
@@ -75,7 +75,7 @@ const location = useLocation()
     const handleGoogleLogin=()=>{
         googleLogin()
         .then(res=>{
-            console.log(res.user);
+            // console.log(res.user);
             toast.success('Registered Successfully')
             setUser(res.user)
             navigate(location?.state ? location.state : '/')

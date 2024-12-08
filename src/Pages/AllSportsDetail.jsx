@@ -4,7 +4,7 @@ import { useLoaderData } from "react-router-dom";
 
 const AllSportsDetail = () => {
   const equipment = useLoaderData();
-  console.log(equipment);
+  // console.log(equipment);
   const {
     photo,
     name,

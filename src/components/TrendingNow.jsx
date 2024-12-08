@@ -22,10 +22,10 @@ const TrendingNow = () => {
   }, [setDataLoading]);
 
   const handleSearch = (ct) => {
-    console.log(ct);
+    // console.log(ct);
 
     const remaining = allCategories.filter((cate) => cate.category == ct);
-    console.log(remaining);
+    // console.log(remaining);
     setTrendingCategories(remaining);
   };
 

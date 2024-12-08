@@ -38,7 +38,7 @@ const navigate = useNavigate()
       email,
       displayName,
     };
-    console.log(equipment);
+    // console.log(equipment);
     fetch(`https://athlete-zone-server.vercel.app/equip/${data._id}`, {
       method: "PUT",
       headers: {
@@ -48,14 +48,14 @@ const navigate = useNavigate()
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         if (res.modifiedCount > 0) {
           toast.success("Updated Successfully");
           navigate('/')
         }
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   };
   return (

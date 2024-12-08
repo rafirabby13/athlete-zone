@@ -29,7 +29,7 @@ const AllSportsEquipment = () => {
   const handleSorting = (e) => {
     e.preventDefault();
     const selectedOption = e.target.value;
-    console.log(selectedOption);
+    // console.log(selectedOption);
     if (selectedOption == "ascending") {
       const sortedData = [...data].sort(function (a, b) {
         return a.price - b.price;

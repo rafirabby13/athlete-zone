@@ -91,7 +91,7 @@ const Navbar = () => {
 
   const handleTheme = () => {
     setTheme((current) => (current === "light" ? "dark" : "light"));
-    console.log(theme);
+    // console.log(theme);
   };
 
   return (

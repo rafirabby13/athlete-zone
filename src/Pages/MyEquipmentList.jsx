@@ -19,7 +19,7 @@ const MyEquipmentList = () => {
   }, [user]);
 
   const handleDelete = (id) => {
-    console.log(id);
+    // console.log(id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -38,7 +38,7 @@ const MyEquipmentList = () => {
         })
           .then((res) => res.json())
           .then((res) => {
-            console.log(res);
+            // console.log(res);
             if (res.deletedCount > 0) {
               const remaining = data.filter((dt) => dt._id != id);
               setData(remaining);
@@ -50,7 +50,7 @@ const MyEquipmentList = () => {
             }
           })
           .catch((err) => {
-            console.log(err.message);
+            // console.log(err.message);
           });
       }
     });

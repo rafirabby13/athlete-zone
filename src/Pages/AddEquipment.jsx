@@ -36,7 +36,7 @@ const navigate = useNavigate()
       email,
       displayName,
     };
-    console.log(equipment);
+    // console.log(equipment);
 
     fetch("https://athlete-zone-server.vercel.app/equipment", {
       method: "POST",
@@ -47,14 +47,14 @@ const navigate = useNavigate()
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         if (res.insertedId) {
           toast.success('Product Added Successfully')
           navigate('/')
         }
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   };
 
