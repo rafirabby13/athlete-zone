@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useLoaderData, useLocation } from "react-router-dom";
+import { Link, useLoaderData, useLocation } from "react-router-dom";
 import MyEquipmentListCard from "../components/MyEquipmentListCard.jsx";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
@@ -60,7 +60,7 @@ const MyEquipmentList = () => {
     <div>
       {data.length == 0 ? (
         <div className="min-h-screen ">
-          <h1 className="text-center bg-slate-400">You Have not added any data</h1>
+          <h1 className="text-center p-5 w-fit mx-auto font-bold text-white text-4xl bg-[#439A97]">You Have not added any data. <Link to='/addEquipment' className="text-[#7b029a] underline">Add data</Link> </h1>
         </div>
       ) : (
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 z-0 min-h-screen py-10 md:py-20 md:pb-44 lg:px-20">
