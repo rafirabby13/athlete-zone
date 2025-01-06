@@ -13,25 +13,27 @@ import Products from "../components/Products.jsx";
 import { Helmet } from "react-helmet";
 const Home = () => {
   return (
-    <div className="space-y-10 lg:max-w-[85%] mx-auto pb-20">
+    <div className="space-y-20  pb-20">
       <Helmet>
-           <title>Home | AthleteZone</title>
+        <title>Home | AthleteZone</title>
       </Helmet>
-         <section>
+      <section>
         <Banner />
       </section>
-       <section>
-        <Products />
-      </section>
-       <section>
-        <SportsCategories />
-      </section>
-       <section>
-        <UpcomingEvents />
-      </section>
-       <section>
-        <TrendingNow />
-      </section>  
+      <div className="lg:max-w-[85%] space-y-20  mx-auto">
+        <section>
+          <Products />
+        </section>
+        <section>
+          <SportsCategories />
+        </section>
+        <section>
+          <UpcomingEvents />
+        </section>
+        <section>
+          <TrendingNow />
+        </section>
+      </div>
     </div>
   );
 };

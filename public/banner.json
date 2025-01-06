@@ -1,0 +1,39 @@
+[
+    {
+      "title": "Fresh Drops for Champions!",
+      "description": "New arrivals to elevate your game. Don’t miss out!",
+      "buttonText": "Explore",
+      "gradient": "from-[#D4F6FF] via-[#FBFBFB] to-[#FFCCE1]",
+      "animation": "https://lottie.host/abda3496-6ff6-45e1-a94e-056561ce2aa4/2kUXuZoPx9.lottie"
+    },
+    {
+      "title": "Gear Up for Every Sport!",
+      "description": "Discover premium sports accessories for all your needs.",
+      "buttonText": "Explore",
+      "gradient": "from-[#A0D683] via-[#FFFECB] to-[#CB9DF0]",
+      "animation": "https://lottie.host/b4a621e2-8679-401b-bd9e-3a7bb0b14a3a/XzkOnynWko.json"
+    },
+    {
+      "title": "Top Picks for Every Athlete",
+      "description": "Our most loved and highly-rated sports gear just for you!",
+      "buttonText": "Explore",
+      "gradient": "from-[#CBE2B5] via-[#FFF] to-[#DCBFFF]",
+      "animation": "https://lottie.host/bfc59e74-1a93-478d-bb45-05431d812e4a/5IiVgu9ktq.json"
+    },
+    {
+      "title": "Train Like a Pro!",
+      "description": "Professional-grade equipment to take your training to the next level.",
+      "buttonText": "Explore",
+      "gradient": "from-[#CB9DF0] via-[#FFF] to-[#BFF6C3]",
+      "animation": "https://lottie.host/59c543b8-166d-42d0-b0e4-6b2784766a5a/7xBRyaHBaL.json"
+    },
+    {
+      "title": "Season’s Biggest Sale!",
+      "description": "Up to 50% off on select sports gear. Limited Time Only!",
+      "buttonText": "Explore",
+      "gradient": "from-[#BFF6C3] via-[#FFF] to-[#CB9DF0]",
+      "animation": "https://lottie.host/ab9272d9-4579-49b9-93e2-75113675de2e/A7WLCcsZ9V.json"
+    }
+    
+  ]
+  

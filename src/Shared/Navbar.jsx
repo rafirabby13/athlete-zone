@@ -24,7 +24,7 @@ const Navbar = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-[#439A97] font-bold text-white lg:text-lg"
+              ? "bg-[#82659c] font-bold text-white lg:text-lg"
               : "font-bold"
           }
           to="/"
@@ -36,7 +36,7 @@ const Navbar = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-[#439A97] font-bold text-white lg:text-lg"
+              ? "bg-[#82659c] font-bold text-white lg:text-lg"
               : "font-bold"
           }
           to="/allSports"
@@ -48,7 +48,7 @@ const Navbar = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-[#439A97] font-bold text-white lg:text-lg"
+              ? "bg-[#82659c] font-bold text-white lg:text-lg"
               : "font-bold"
           }
           to="/addEquipment"
@@ -60,7 +60,7 @@ const Navbar = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-[#439A97] font-bold text-white lg:text-lg"
+              ? "bg-[#82659c] font-bold text-white lg:text-lg"
               : "font-bold"
           }
           to={`/myEquipment`}
@@ -95,8 +95,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="py-1 lg:py-7 nav ">
-      <div className="navbar lg:px-4 xl:px-28">
+    <div className="py-1 lg:py-3 nav shadow-md fixed top-0 left-0 right-0 z-50 ">
+      <div className="navbar lg:px-4 xl:px-28 ">
         <div className="navbar-start ">
           <div className="dropdown ">
             <div
@@ -143,7 +143,7 @@ const Navbar = () => {
           </Fade>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal items-center px-1">{items}</ul>
+          <ul className="menu text-xl menu-horizontal items-center px-1">{items}</ul>
         </div>
 
         <div className="navbar-end ">
@@ -151,7 +151,7 @@ const Navbar = () => {
             <div className="flex items-center gap-1  md:gap-4">
               <img
                 data-tooltip-id="my-tooltip"
-                className="h-12 w-12 lg:h-16 lg:w-16 rounded-full border-[5px] p-1 border-[#62B6B7]"
+                className="h-12 w-12 lg:h-16 lg:w-16 rounded-full border-[5px] p-1 border-[#82659c]"
                 src={user?.photoURL}
                 alt={user?.displayName}
               />
@@ -166,7 +166,7 @@ const Navbar = () => {
               </Tooltip>
               <Link
                 onClick={handleLogout}
-                className="btn bg-[#62B6B7] text-white  text-sm border-none"
+                className="btn bg-[#82659c] text-white  text-sm border-none"
               >
                 Logout
               </Link>
@@ -174,13 +174,13 @@ const Navbar = () => {
           ) : (
             <div className="flex gap-2">
               <Link
-                className="btn bg-[#62B6B7] border-none  text-white"
+                className="btn bg-[#82659c] border-none  text-white"
                 to="/login"
               >
                 Login
               </Link>
               <Link
-                className="btn bg-[#62B6B7] border-none  text-white"
+                className="btn bg-[#82659c] border-none  text-white"
                 to="/register"
               >
                 Register
@@ -191,7 +191,7 @@ const Navbar = () => {
         <div
           data-tooltip-id="togglee"
           onClick={handleTheme}
-          className="text-3xl bg-[#62B6B7] p-2 lg:py-1 lg:text-5xl ml-2 xl:ml-5 font-normal  rounded-xl border-none "
+          className="text-3xl bg-[#82659c] p-2 lg:py-1 lg:text-5xl ml-2 xl:ml-5 font-normal  rounded-xl border-none "
         >
           {theme == "light" ? <PiToggleLeftFill /> : <FaToggleOn />}
         </div>

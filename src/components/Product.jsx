@@ -8,19 +8,19 @@ const Product = ({ product }) => {
   const { _id, photo, name, category, description, price, rating, stock } =
     product;
   return (
-    <div className="relative group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow h-full flex flex-col justify-between border-2 border-transparent hover:border-gradient-to-r hover:from-blue-500 hover:to-purple-500 product">
+    <div className="relative group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow h-full flex flex-col justify-between border-2 border-transparent  product">
       <img
         src={photo}
         alt={name}
-        className="w-full h-60  group-hover:scale-105 transition-transform"
+        className="w-full h-32  hover:scale-105 hover:px-6 transition-transform"
       />
-      <div className="p-6">
-        <h2 className="text-lg font-bold  group-hover:text-blue-500 transition-transform transform group-hover:scale-105">
-          {name}
-        </h2>
-        <p className="text-sm  mt-2">Category: {category}</p>
-        <p className=" mt-2 text-sm">{description}</p>
-        <div className="flex items-center justify-between mt-4">
+      <div className="p-2">
+        <h2 className="text-lg font-bold  ">{name}</h2>
+        {/* <p className="text-sm  mt-2">Category: {category}</p> */}
+        <p className=" mt-2 text-sm">
+          {description.length > 30 ? description.slice(0, 30) : description}...
+        </p>
+        {/* <div className="flex items-center justify-between mt-4">
           <span className="text-xl font-semibold text-[#439A97]">${price}</span>
           <div className="flex items-center">
             {[...Array(5)].map((_, i) => (
@@ -37,22 +37,19 @@ const Product = ({ product }) => {
               </svg>
             ))}
           </div>
-        </div>
-        <p
+        </div> */}
+        {/* <p
           className={`mt-3 text-sm font-semibold ${
             stock === "Available" ? "text-[#439A97]" : "text-[#439A97]"
           }`}
         >
           Available stock : {stock}
-        </p>
+        </p> */}
         <Link to={`/allSports/${_id}`}>
-          <button className="w-full mt-4 py-2 bg-gradient-to-br from-[#439A97] to-[#490467] text-white rounded-lg hover:from-purple-500 hover:to-[#7b0eaa81] transition">
+          <button className="w-fit px-12 mt-4 py-1 bg-[#439a97cd]  rounded-lg text-sm  transition">
             View Details
           </button>
         </Link>
-      </div>
-      <div className="absolute top-4 right-4 bg-purple-800 font-semibold shadow-lg  p-3 text-lg rounded-2xl  transition-transform transform group-hover:scale-105 group-hover:bg-blue-500 text-white">
-        {category}
       </div>
     </div>
   );

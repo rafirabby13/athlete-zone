@@ -29,7 +29,9 @@ body {
 }
 
 #light .nav {
-  background-color: #FFFBEB;
+  background-color: #a5cfc4;
+  /* background-color: #c6a7b6; */
+  border: 3px solid #a5cfc4;
 }
 #dark .nav {
   background-color: #1B2430;

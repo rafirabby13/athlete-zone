@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider.jsx";
 import { useLoaderData, useNavigate } from "react-router-dom";
@@ -59,14 +60,14 @@ const navigate = useNavigate()
       });
   };
   return (
-    <div className="py-10">
+    <div className="py-10 md:max-w-[85%] mx-auto" >
        <Helmet>
            <title>Update Equipment | AthleteZone</title>
       </Helmet>
-      <h1 className="md:w-3/4 mx-auto text-xl md:text-4xl font-bold p-4 shadow-purple-600 shadow-md text-center mb-2">
+      <h1 className=" lg:mt-48 mx-auto text-xl md:text-4xl font-bold p-4 shadow-purple-600 shadow-md text-center mb-2">
         Update Equipment
       </h1>
-      <div className="min-h-screen">
+      <div className="min-h-screen ">
         <div className="card p-2 bg-base-100 w-full  shrink-0 shadow-2xl rounded-none">
           <form
             className="card-bod md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:p-16"

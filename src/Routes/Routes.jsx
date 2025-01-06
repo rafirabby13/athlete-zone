@@ -40,7 +40,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/allSports/:id',
-                element: <PrivateRoute><AllSportsDetail/></PrivateRoute>,
+                element: <AllSportsDetail/>,
                 loader: ({params})=> fetch(`https://athlete-zone-server.vercel.app/equipment/${params.id}`)
             },
             {

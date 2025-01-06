@@ -51,7 +51,7 @@ const Login = () => {
   }
 
   return (
-    <div className="her my-10 md:my-0  min-h-screen">
+    <div className="her my-16 md:my-0 lg:mt-36   min-h-screen">
        <Helmet>
            <title>Login | AthleteZone</title>
       </Helmet>

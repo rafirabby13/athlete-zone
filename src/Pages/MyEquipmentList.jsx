@@ -66,7 +66,7 @@ const MyEquipmentList = () => {
           <span className="loading loading-bars loading-lg mx-auto"></span>
         </div>
       ) : data.length == 0 ? (
-        <div className="min-h-screen ">
+        <div className="min-h-screen lg:mt-48">
           <h1 className="text-center p-5 w-fit mx-auto font-bold text-white text-4xl bg-[#439A97]">
             You Have not added any data.{" "}
             <Link to="/addEquipment" className="text-[#7b029a] underline">
@@ -75,7 +75,7 @@ const MyEquipmentList = () => {
           </h1>
         </div>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 z-0 min-h-screen py-10 md:py-20 md:pb-44 lg:px-20">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-5 z-0 min-h-screen py-10 md:py-20 md:pb-44 lg:px-20 lg:mt-48">
           {data?.map((myEquipments) => (
             <MyEquipmentListCard
               key={myEquipments._id}

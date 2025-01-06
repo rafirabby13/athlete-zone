@@ -19,7 +19,7 @@ const Footer = () => {
            
           </div>
         
-        <div className=" flex md:flex-row gap-5 flex-col items-start text-[#ffffff] justify-between px-4 md:px-20">
+        <div className=" flex md:flex-row gap-5 flex-col items-start text-[#ffffff] justify-between px-4 md:max-w-[85%] mx-auto">
           <div className="flex flex-col gap-2 text-sm md:text-xl">
             <h6 className="footer-title">Products</h6>
             <a className="link link-hover">Sports Gear</a>
@@ -43,7 +43,8 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <footer className="foote    px-4 md:px-20  text-xl flex md:flex-row flex-col gap-5 items-center justify-between text-[#ffffffe4] py-10">
+      <footer className="foote      text-xl   text-[#ffffffe4] py-10">
+        <div className="md:max-w-[85%] mx-auto md:flex-row flex-col gap-5 flex items-center justify-between">
         <aside className="grid-flow-col items-center text-[#ffffffc2] text-sm md:text-2xl text-center md:text-start ">
           <p>
             @copyright AthleteZone Online Store. All Rights Reserved.
@@ -72,6 +73,7 @@ const Footer = () => {
             </div>
           </div>
         </nav>
+        </div>
       </footer>
     </div>
   );

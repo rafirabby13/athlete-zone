@@ -10,15 +10,15 @@ const AllSportsEquipment = () => {
   const { dataLoading, setDataLoading } = useContext(AuthContext);
 
   useEffect(() => {
-    setDataLoading(true)
+    setDataLoading(true);
 
     fetch("https://athlete-zone-server.vercel.app/equipment")
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
+        console.log(data);
         // if (data.length > 0) {
         setData(data);
-          setDataLoading(false)
+        setDataLoading(false);
         // }
         // else{
         //   console.log('object');
@@ -63,14 +63,14 @@ const AllSportsEquipment = () => {
           <span className="loading loading-bars loading-lg mx-auto"></span>
         </div>
       ) : (
-        <div className="min-h-screen py-4 md:py-20">
-          <div className="flex md:flex-row flex-col items-center justify-between p-5 md:p-20">
+        <div className="min-h-screen py-4 md:py-20 md:mt-20 md:max-w-[85%] mx-auto">
+          <div className="flex md:flex-row flex-col items-center justify-between  md:py-20">
             <h1 className=" md:w-fit  md:text-4xl font-bold p-4 shadow-purple-600 shadow-md text-center mb-2">
               All Sports Equipment
             </h1>
 
             <select
-              className="border-2 p-4 rounded-lg bg-purple-950 text-white md:text-2xl font-semibold"
+              className="border-2 p-4 rounded-lg bg-[#82659c] text-white md:text-2xl font-semibold"
               name="sorting"
               onChange={handleSorting}
               selected="Sort"
@@ -80,7 +80,44 @@ const AllSportsEquipment = () => {
               <option value="descending">Descending</option>
             </select>
           </div>
-          <div className="overflow-x-auto md:px-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
+            {data?.map((equipment, i) => (
+              <div
+                key={i}
+                className="p-2 border-2 rounded-lg shadow-md bg-white flex flex-col justify-between"
+              >
+                {/* Image Section */}
+                {equipment?.photo && (
+                  <img
+                    src={equipment?.photo}
+                    alt={equipment?.name}
+                    className="w-full h-32  rounded-md mb-4"
+                  />
+                )}
+
+                {/* Card Header: Equipment Name and Index */}
+                <div>
+                  {/* Equipment Name */}
+                  <h3 className="text-xl font-bold text-gray-800">
+                    {equipment?.name}
+                  </h3>
+                </div>
+
+                {/* Card Footer: Price and Action Button */}
+                <div className="mt-4 flex justify-between items-center">
+                  {/* View Details Button */}
+                  <Link
+                    to={`/allSports/${equipment?._id}`}
+                    className="px-4 py-1 text-sm font-semibold text-white bg-[#82659c] rounded-md hover:bg-purple-700"
+                  >
+                    View details
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* <div className="overflow-x-auto md:px-20">
             <table className="table  border-2 text-center">
               <thead className="tableHeader">
                 <tr className="text-xl">
@@ -104,7 +141,7 @@ const AllSportsEquipment = () => {
                     <td>{equipment?.category}</td>
                     <td className="hidden md:block"></td>
                     <td className="hidden md:block">{equipment?.price} $</td>
-                    <td className="px-2 py-0 border-2 bg-purple-950 text-white font-semibold">
+                    <td className="px-2 py-0 border-2 bg-[#82659c] text-white font-semibold">
                       <Link
                         to={`/allSports/${equipment?._id}`}
                         
@@ -116,7 +153,7 @@ const AllSportsEquipment = () => {
                 ))}
               </tbody>
             </table>
-          </div>
+          </div> */}
         </div>
       )}
     </div>
