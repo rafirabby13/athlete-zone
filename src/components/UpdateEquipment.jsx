@@ -60,15 +60,15 @@ const navigate = useNavigate()
       });
   };
   return (
-    <div className="py-10 md:max-w-[85%] mx-auto mt-20 lg:mt-0" >
+    <div className="py-10 md:max-w-[85%] mx-auto mt-16 lg:mt-0" >
        <Helmet>
            <title>Update Equipment | AthleteZone</title>
       </Helmet>
       <h1 className=" lg:mt-48 mx-auto text-xl md:text-4xl font-bold p-4 shadow-purple-600 shadow-md text-center mb-2">
         Update Equipment
       </h1>
-      <div className="min-h-screen ">
-        <div className="card p-2 bg-base-100 w-full  shrink-0 shadow-2xl rounded-none">
+      <div className="min-h-screen text-black">
+        <div className="card p-2 update w-full   shrink-0 shadow-2xl rounded-none">
           <form
             className="card-bod md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:p-16"
             onSubmit={handleAddEquipment}
@@ -80,7 +80,7 @@ const navigate = useNavigate()
               <input
                 type="text"
                 placeholder="Image URL"
-                className="input input-bordered"
+                className="input input-bordered  placeholder-black"
                 name="photo"
                 defaultValue={data.photo}
               />

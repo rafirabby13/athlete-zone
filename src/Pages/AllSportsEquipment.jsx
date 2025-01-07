@@ -80,11 +80,11 @@ const AllSportsEquipment = () => {
               <option value="descending">Descending</option>
             </select>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-10 md:py-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-10 md:py-0  allEqui">
             {data?.map((equipment, i) => (
               <div
                 key={i}
-                className="p-2 border-2 rounded-lg shadow-md bg-white flex flex-col justify-between"
+                className="p-2 border-2 rounded-lg shadow-md  flex flex-col justify-between"
               >
                 {/* Image Section */}
                 {equipment?.photo && (
@@ -98,13 +98,13 @@ const AllSportsEquipment = () => {
                 {/* Card Header: Equipment Name and Index */}
                 <div>
                   {/* Equipment Name */}
-                  <h3 className="text-xl font-bold text-gray-800">
+                  <h3 className="text-xl font-bold ">
                     {equipment?.name}
                   </h3>
                 </div>
                 <div>
                   {/* Equipment Name */}
-                  <h3 className="text-lg font-bold text-gray-800">
+                  <h3 className="text-lg font-bold ">
                     $ {equipment?.price}
                   </h3>
                 </div>

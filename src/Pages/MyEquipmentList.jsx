@@ -60,7 +60,7 @@ const MyEquipmentList = () => {
   };
   // console.log(data);
   return (
-    <div className="lg:max-w[85%] mx-auto lg:mt-40 mt-20">
+    <div className="lg:max-w[85%] mx-auto lg:pt-40 py-16">
       {dataLoading ? (
         <div className="flex justify-center">
           <span className="loading loading-bars loading-lg mx-auto"></span>

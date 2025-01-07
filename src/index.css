@@ -39,8 +39,15 @@ body {
   
   color: white;
 }
+#dark .allEqui {
+  background: #1B2430;
+  
+  color: white;
+}
 #dark .banner {
-  background: linear-gradient(90deg, #1a3636, #432e54);
+  background: #1b24307d;
+
+  /* background: linear-gradient(90deg, #1a3636, #432e54); */
   color: white;
 }
 #light .product {

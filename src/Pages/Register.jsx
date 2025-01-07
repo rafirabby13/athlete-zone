@@ -82,13 +82,13 @@ const Register = () => {
   };
 
   return (
-    <div className="her my-28 lg:mt-36   min-h-screen">
+    <div className="her  lg:pt-32 py-28  min-h-screen">
       <Helmet>
         <title>Register | AthleteZone</title>
       </Helmet>
       <div className="hero-conten flex-col  ">
         <div className="text-center  md:py-10">
-          <h1 className="text-2xl md:text-5xl font-bold ">
+          <h1 className="text-2xl md:text-5xl font-bold pb-3">
             Register now!
           </h1>
         </div>
