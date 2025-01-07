@@ -23,7 +23,7 @@ const Banner = () => {
       });
   }, []);
   return (
-    <div className="z-10 mt:10 lg:mt-24">
+    <div className="z-10 mt:10 lg:mt-24 ">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
