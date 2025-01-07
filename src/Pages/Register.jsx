@@ -82,17 +82,17 @@ const Register = () => {
   };
 
   return (
-    <div className="her my-16 lg:mt-36   min-h-screen">
+    <div className="her my-28 lg:mt-36   min-h-screen">
       <Helmet>
         <title>Register | AthleteZone</title>
       </Helmet>
       <div className="hero-conten flex-col  ">
         <div className="text-center  md:py-10">
-          <h1 className="text-2xl md:text-5xl font-bold pb-10">
+          <h1 className="text-2xl md:text-5xl font-bold ">
             Register now!
           </h1>
         </div>
-        <div className="card register w-full max-w-xl mx-auto md:py-10 pb-7 md:pb-0  shrink-0 shadow-2xl">
+        <div className="card register w-full max-w-xl mx-auto md:py-0 pb-7 md:pb-0  shrink-0 shadow-2xl">
           <form className="card-body" onSubmit={handleSubmit}>
             <div className="form-control">
               <label className="label">
@@ -153,9 +153,9 @@ const Register = () => {
             </div>
           </form>
           <div className="divider divider-info w-3/4 mx-auto md:pb-5">OR</div>
-          <div className="text-center w-full">
+          <div className="text-center w-full mb-10">
             <button
-              className="border-2 w-3/4 p-2 md:p-4 mb-10  md:text-2xl font-semibold rounded-lg bg-[#439A97] shadow-red-400 shadow-sm text-white"
+              className=" btn rounded-lg   bg-[#439A97]  text-white"
               onClick={handleGoogleLogin}
             >
               Sign Up With Google

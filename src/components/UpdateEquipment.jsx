@@ -60,7 +60,7 @@ const navigate = useNavigate()
       });
   };
   return (
-    <div className="py-10 md:max-w-[85%] mx-auto" >
+    <div className="py-10 md:max-w-[85%] mx-auto mt-20 lg:mt-0" >
        <Helmet>
            <title>Update Equipment | AthleteZone</title>
       </Helmet>

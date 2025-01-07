@@ -32,7 +32,8 @@ const Navbar = () => {
           Home
         </NavLink>
       </li>
-      <li>
+      {
+        user ? <><li>
         <NavLink
           className={({ isActive }) =>
             isActive
@@ -67,7 +68,8 @@ const Navbar = () => {
         >
           My Equipment List
         </NavLink>
-      </li>
+      </li></> : ''
+      }
     </>
   );
 
@@ -143,7 +145,7 @@ const Navbar = () => {
           </Fade>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu text-xl menu-horizontal items-center px-1">{items}</ul>
+          <ul className="menu xl:text-xl menu-horizontal items-center px-1">{items}</ul>
         </div>
 
         <div className="navbar-end ">

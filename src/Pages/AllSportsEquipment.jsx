@@ -54,7 +54,7 @@ const AllSportsEquipment = () => {
   // }
 
   return (
-    <div className="pb-10 md:pb-20">
+    <div className="pb-10 md:pb-20 mt-20">
       <Helmet>
         <title>All Sports | AthleteZone</title>
       </Helmet>
@@ -63,7 +63,7 @@ const AllSportsEquipment = () => {
           <span className="loading loading-bars loading-lg mx-auto"></span>
         </div>
       ) : (
-        <div className="min-h-screen py-4 md:py-20 md:mt-20 md:max-w-[85%] mx-auto">
+        <div className="min-h-screen py-4 md:py-0 mt-20 md:max-w-[85%] mx-auto">
           <div className="flex md:flex-row flex-col items-center justify-between  md:py-20">
             <h1 className=" md:w-fit  md:text-4xl font-bold p-4 shadow-purple-600 shadow-md text-center mb-2">
               All Sports Equipment
@@ -80,7 +80,7 @@ const AllSportsEquipment = () => {
               <option value="descending">Descending</option>
             </select>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-10 md:py-0">
             {data?.map((equipment, i) => (
               <div
                 key={i}
@@ -100,6 +100,12 @@ const AllSportsEquipment = () => {
                   {/* Equipment Name */}
                   <h3 className="text-xl font-bold text-gray-800">
                     {equipment?.name}
+                  </h3>
+                </div>
+                <div>
+                  {/* Equipment Name */}
+                  <h3 className="text-lg font-bold text-gray-800">
+                    $ {equipment?.price}
                   </h3>
                 </div>
 

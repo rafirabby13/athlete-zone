@@ -51,7 +51,7 @@ const Login = () => {
   }
 
   return (
-    <div className="her my-16 md:my-0 lg:mt-36   min-h-screen">
+    <div className="her my-24 md:my-0 md:my-20   min-h-screen">
        <Helmet>
            <title>Login | AthleteZone</title>
       </Helmet>
@@ -98,7 +98,7 @@ const Login = () => {
           </form>
           <div className="divider divider-info w-3/4 mx-auto md:pb-5">OR</div>
           <div className="text-center w-full">
-            <button className="border-2 w-3/4 p-4  md:text-2xl mb-7 md:mb-0 font-semibold rounded-lg bg-[#439A97] text-white shadow-red-400 shadow-sm" onClick={handleGoogleLogin}>Sign In With Google</button>
+            <button className=" btn rounded-lg bg-[#439A97] text-white " onClick={handleGoogleLogin}>Sign In With Google</button>
           </div>
         </div>
       </div>

@@ -60,7 +60,7 @@ const MyEquipmentList = () => {
   };
   // console.log(data);
   return (
-    <div>
+    <div className="lg:max-w[85%] mx-auto lg:mt-40 mt-20">
       {dataLoading ? (
         <div className="flex justify-center">
           <span className="loading loading-bars loading-lg mx-auto"></span>
@@ -75,14 +75,61 @@ const MyEquipmentList = () => {
           </h1>
         </div>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-5 z-0 min-h-screen py-10 md:py-20 md:pb-44 lg:px-20 lg:mt-48">
-          {data?.map((myEquipments) => (
-            <MyEquipmentListCard
-              key={myEquipments._id}
-              myEquipments={myEquipments}
-              handleDelete={handleDelete}
-            ></MyEquipmentListCard>
-          ))}
+        // <MyEquipmentListCard
+        //   key={myEquipments._id}
+        //   myEquipments={myEquipments}
+        //   handleDelete={handleDelete}
+        // ></MyEquipmentListCard>
+        <div className="overflow-x-auto w-full p-5 ">
+          <table className="table w-full border border-gray-200 max-w-[85%] mx-auto">
+            {/* Table Head */}
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="p-3">Image</th>
+                <th className="p-3">Name</th>
+                <th className="p-3">Price</th>
+                <th className="p-3"></th>
+                <th className="p-3">Actions</th>
+              </tr>
+            </thead>
+
+            {/* Table Body */}
+            <tbody>
+              {data.map((tutorial) => (
+                <tr key={tutorial._id} className="">
+                  <td className="p-3">
+                    <div className="avatar">
+                      <div className="w-16 rounded">
+                        <img
+                          src={
+                            tutorial.photo ||
+                            "https://via.placeholder.com/100?text=No+Image"
+                          }
+                          alt="Tutorial"
+                        />
+                      </div>
+                    </div>
+                  </td>
+                  <td className="p-3">{tutorial.name}</td>
+                  <td className="p-3">${tutorial.price}</td>
+                  <td className="p-3">{tutorial.review}</td>
+                  <td className="p-3 flex gap-2">
+                    <Link to={`/updateEquipment/${tutorial._id}`}>
+                      <button className="btn bg-[#439A97] text-white btn-sm">
+                        Update
+                      </button>
+                    </Link>
+                    <button
+                      onClick={() => handleDelete(tutorial._id)}
+                      className="btn bg-[#439A97] text-white btn-sm"
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       )}
     </div>

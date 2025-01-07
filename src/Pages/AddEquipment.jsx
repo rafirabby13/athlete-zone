@@ -60,7 +60,7 @@ const AddEquipment = () => {
   };
 
   return (
-    <div className="py-10 md:max-w-[85%] mx-auto">
+    <div className="py-10 md:max-w-[85%] mx-auto mt-20">
       <Helmet>
         <title>Add Equipment | AthleteZone</title>
       </Helmet>
