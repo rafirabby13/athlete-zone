@@ -18,7 +18,7 @@ const AllSportsDetail = () => {
     displayName,
   } = equipment;
   return (
-    <div className="min-h-screen w-full py-10 mt-40">
+    <div className="min-h-screen w-full  py-40 p-3">
       <Helmet>
         <title>Detail | AthleteZone</title>
       </Helmet>
@@ -31,19 +31,19 @@ const AllSportsDetail = () => {
           <img src={photo} alt={name} className="w-full h-48 md:h-[400px]" />
         </div>
 
-        <div className="md:p-10 border-l-4 md:w-1/2  bg-white ">
+        <div className="md:p-10 border-l-4 md:w-1/2   ">
           {/* Product Name */}
-          <h3 className="text-2xl font-bold text-gray-800 tracking-tight">
+          <h3 className="text-2xl font-bold  tracking-tight">
             {name}
           </h3>
 
           {/* Category */}
           {category && (
-            <p className="text-sm text-gray-500 italic mt-1">{category}</p>
+            <p className="text-sm  italic mt-1">{category}</p>
           )}
 
           {/* Description */}
-          <p className="text-gray-600 mt-3 line-clamp-3">{description}</p>
+          <p className=" mt-3 line-clamp-3">{description}</p>
 
           {/* Price and Delivery Time */}
           <div className="mt-4 flex flex-col md:flex-col justify-between ">
@@ -65,7 +65,7 @@ const AllSportsDetail = () => {
               >
                 <path d="M9.049 2.927a1 1 0 011.902 0l1.176 3.618a1 1 0 00.95.691h3.823a1 1 0 01.591 1.809l-3.097 2.253a1 1 0 00-.364 1.118l1.176 3.618a1 1 0 01-1.539 1.118L10 13.347l-3.097 2.253a1 1 0 01-1.539-1.118l1.176-3.618a1 1 0 00-.364-1.118L3.079 9.045a1 1 0 01.591-1.809h3.823a1 1 0 00.95-.691L9.049 2.927z" />
               </svg>
-              <span className="ml-2 text-gray-800">{rating} / 5</span>
+              <span className="ml-2 ">{rating} / 5</span>
             </div>
             {/* Customizable Badge */}
             {customization && (
@@ -76,7 +76,7 @@ const AllSportsDetail = () => {
           </div>
 
           {/* Additional Information */}
-          <div className="mt-4 text-gray-500 space-y-2 text-sm">
+          <div className="mt-4  space-y-2 text-sm">
             <p>
               Added by: <span className="font-bold">{displayName}</span>
             </p>
