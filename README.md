@@ -3,7 +3,7 @@
 ###
 
 <div align="center">
-  <img height="350" width="full src="https://i.ibb.co.com/Gs7yrrC/Whats-App-Image-2025-01-08-at-17-06-27-50bd914d.jpg"  />
+  <img height="350" width="full" src="https://i.ibb.co.com/Gs7yrrC/Whats-App-Image-2025-01-08-at-17-06-27-50bd914d.jpg"  />
 </div>
 
 ###
