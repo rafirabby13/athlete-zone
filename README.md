@@ -10,3 +10,23 @@
 4. User can see his/her added data list after login. User can also delete added data only by clicking delete button. A confirmation pop up will ask for delete.
 5. Dark/Light theme toggle functionality also added at the navbar.  
 
+<p align="left">AthleteZone is a web platform for managing sports equipment data. It allows authenticated users to add, update, view, and delete equipment data.</p>
+
+###
+
+<p align="left">1. Frontend: React, TailwindCSS<br>2. Backend: Firebase Authentication<br>3. Routing: React Router</p>
+
+###
+
+
+
+###
+
+<h2 align="left">Run the project locally</h2>
+
+###
+
+<p align="left">1. Clone the repository.<br>2. Run npm install to install dependencies.<br>3. Set up Firebase for authentication.<br>4. Set up MongoDB For Data Storage<br>5. Use npm run dev to launch the project.</p>
+
+###
+
